@@ -2074,6 +2074,229 @@ body.ee-jinx .jinx-home .jinx-hero-bomb{
   }
 }
 
+
+/* ===== ACHIEVEMENTS + CIVICFLOW PASS v13 ===== */
+
+/* CivicFlow gets a featured full-width mission treatment. */
+.mission-civic{
+  grid-column:1 / -1;
+  min-height:420px;
+  display:grid;
+  grid-template-columns:minmax(280px,.78fr) 1.22fr;
+  grid-template-rows:auto auto auto 1fr auto auto;
+  column-gap:28px;
+  align-items:start;
+  background:
+    linear-gradient(135deg,rgba(52,201,255,.09),transparent 30%),
+    linear-gradient(315deg,rgba(140,255,90,.055),transparent 28%),
+    #20102b;
+}
+.mission-civic .mission-top{grid-column:1 / -1}
+.mission-civic .mission-art{
+  grid-column:1;
+  grid-row:2 / span 5;
+  height:100%;
+  min-height:300px;
+}
+.mission-civic h3,
+.mission-civic h4,
+.mission-civic>p,
+.mission-civic .chips,
+.mission-civic .civic-links{grid-column:2}
+.mission-civic h3{margin-top:4px}
+.art-civic{
+  background:
+    radial-gradient(circle at 18% 18%,rgba(140,255,90,.16),transparent 24%),
+    radial-gradient(circle at 82% 74%,rgba(52,201,255,.18),transparent 28%),
+    linear-gradient(145deg,#07151d,#171027 58%,#25143a);
+}
+.civic-art-ui{
+  position:relative;
+  z-index:2;
+  width:82%;
+  height:72%;
+  border:2px solid var(--blue);
+  background:rgba(5,10,16,.76);
+  box-shadow:7px 7px 0 rgba(141,69,255,.65);
+  overflow:hidden;
+}
+.civic-art-ui:before{
+  content:"SERVICE REQUEST // OPS FLOW";
+  position:absolute;
+  left:12px;
+  top:10px;
+  color:var(--green);
+  font:8px var(--pixel);
+  letter-spacing:.06em;
+}
+.civic-logo{
+  position:absolute;
+  left:18px;
+  bottom:18px;
+  width:70px;
+  height:70px;
+  display:grid;
+  place-items:center;
+  border:3px solid var(--pink);
+  color:var(--paper);
+  background:#100717;
+  font:31px var(--display);
+  box-shadow:5px 5px 0 var(--blue);
+}
+.civic-art-ui b{
+  position:absolute;
+  right:13px;
+  bottom:15px;
+  max-width:54%;
+  color:#dcecff;
+  font:8px/1.6 var(--pixel);
+  text-align:right;
+}
+.civic-route{
+  position:absolute;
+  height:3px;
+  background:linear-gradient(90deg,var(--pink),var(--blue),var(--green));
+  transform-origin:left center;
+  opacity:.85;
+}
+.civic-route.r1{width:45%;left:34%;top:39%;transform:rotate(10deg)}
+.civic-route.r2{width:37%;left:47%;top:55%;transform:rotate(-12deg)}
+.civic-node{
+  position:absolute;
+  width:14px;height:14px;
+  border:2px solid #081018;
+  background:var(--blue);
+  box-shadow:0 0 12px rgba(52,201,255,.42);
+}
+.civic-node.n1{left:31%;top:34%;background:var(--pink)}
+.civic-node.n2{left:55%;top:48%;background:var(--blue)}
+.civic-node.n3{right:14%;top:43%;background:var(--green)}
+.civic-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+  padding-top:12px;
+  border-top:1px dashed rgba(255,255,255,.18);
+}
+.civic-links a{
+  padding:8px 10px;
+  border:1px solid var(--blue);
+  background:#0f0716;
+  color:var(--blue-2);
+  font:9px var(--pixel);
+}
+.civic-links a:last-child{border-color:var(--green);color:var(--green)}
+.civic-links a:hover{
+  transform:translateY(-2px);
+  border-color:var(--pink);
+  color:var(--pink-2);
+}
+
+/* Jinx achievements: use the empty lower-right space deliberately. */
+body.ee-jinx .achievement-layout{
+  grid-template-columns:1fr .95fr;
+  grid-template-rows:auto 340px;
+  gap:18px;
+  align-items:stretch;
+}
+body.ee-jinx .achievement-cards{
+  grid-column:1;
+  grid-row:1 / span 2;
+}
+body.ee-jinx .evidence-cache{
+  grid-column:2;
+  grid-row:1;
+  align-self:start;
+}
+body.ee-jinx .jinx-achievement-girl{
+  display:flex!important;
+  position:relative!important;
+  grid-column:2;
+  grid-row:2;
+  right:auto!important;
+  bottom:auto!important;
+  width:100%!important;
+  height:340px!important;
+  min-height:0!important;
+  margin:0!important;
+  overflow:hidden;
+  align-items:flex-end!important;
+  justify-content:center!important;
+  border:2px solid rgba(255,59,189,.42);
+  background:
+    radial-gradient(circle at 50% 72%,rgba(255,59,189,.14),transparent 30%),
+    radial-gradient(circle at 70% 25%,rgba(47,214,255,.08),transparent 24%),
+    linear-gradient(180deg,rgba(17,8,25,.35),rgba(7,5,12,.78));
+  box-shadow:6px 6px 0 rgba(47,214,255,.16);
+}
+body.ee-jinx .jinx-achievement-girl:before{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border:1px dashed rgba(47,214,255,.18);
+  pointer-events:none;
+}
+body.ee-jinx .jinx-achievement-girl:after{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:7%;
+  bottom:18px;
+  height:3px;
+  background:linear-gradient(90deg,transparent,var(--jinx-pink),var(--jinx-blue),transparent);
+  opacity:.7;
+}
+body.ee-jinx .jinx-achievement-girl img{
+  position:relative;
+  z-index:2;
+  width:auto!important;
+  height:112%!important;
+  max-width:94%!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  transform:translateY(18px) rotate(1deg)!important;
+  animation:jinxGirlPulse 2.8s steps(2,end) infinite alternate!important;
+  filter:
+    drop-shadow(8px 9px 0 rgba(7,3,12,.62))
+    drop-shadow(0 0 18px rgba(255,59,189,.16))!important;
+}
+
+@media(max-width:1040px){
+  .mission-civic{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+  .mission-civic .mission-top,
+  .mission-civic .mission-art,
+  .mission-civic h3,
+  .mission-civic h4,
+  .mission-civic>p,
+  .mission-civic .chips,
+  .mission-civic .civic-links{
+    grid-column:1;
+    grid-row:auto;
+  }
+  .mission-civic .mission-art{height:220px;min-height:220px}
+  body.ee-jinx .achievement-layout{
+    grid-template-columns:1fr!important;
+    grid-template-rows:auto!important;
+  }
+  body.ee-jinx .achievement-cards,
+  body.ee-jinx .evidence-cache,
+  body.ee-jinx .jinx-achievement-girl{
+    grid-column:1!important;
+    grid-row:auto!important;
+  }
+  body.ee-jinx .jinx-achievement-girl{height:300px!important}
+}
+@media(max-width:760px){
+  .mission-civic{grid-column:auto;min-height:0}
+  .civic-art-ui{width:88%;height:76%}
+  body.ee-jinx .jinx-achievement-girl{height:240px!important}
+  body.ee-jinx .jinx-achievement-girl img{height:108%!important}
+}
+
 </style>
 </head>
 <body>
@@ -2411,6 +2634,33 @@ body.ee-jinx .jinx-home .jinx-hero-bomb{
           </p>
           <div class="chips"><span>PYTHON</span><span>VALIDATION</span><span>SECURITY UTILITIES</span></div>
           <a href="https://github.com/MuznaImran" target="_blank" rel="noreferrer">OPEN GITHUB INVENTORY ↗</a>
+        </article>
+
+        <article class="mission mission-civic reveal flame-hover" data-xp="460" data-toast="+460 XP // CIVICFLOW">
+          <div class="mission-top"><span class="mission-no">05</span><span class="rarity epic">FULL STACK</span></div>
+          <div class="mission-art art-civic">
+            <div class="civic-art-ui" aria-hidden="true">
+              <span class="civic-logo">CF</span>
+              <span class="civic-route r1"></span>
+              <span class="civic-route r2"></span>
+              <span class="civic-node n1"></span>
+              <span class="civic-node n2"></span>
+              <span class="civic-node n3"></span>
+              <b>NEW → CLAIMED → ACTIVE → RESOLVED</b>
+            </div>
+            <span class="graffiti">SHIP IT.</span>
+          </div>
+          <h3>CIVICFLOW</h3>
+          <h4>FULL-STACK COMMUNITY SERVICE REQUEST TRACKER</h4>
+          <p>
+            Built a resident-to-operations workflow for submitting, claiming, tracking and resolving
+            community service requests, with authenticated admin actions, audit history, reporting and CSV export.
+          </p>
+          <div class="chips"><span>NEXT.JS</span><span>TYPESCRIPT</span><span>REACT</span><span>CLOUDFLARE D1</span><span>DRIZZLE ORM</span></div>
+          <div class="civic-links">
+            <a href="https://civicflow-request-tracker.muznaimran328.chatgpt.site" target="_blank" rel="noreferrer">LIVE DEMO ↗</a>
+            <a href="https://github.com/MuznaImran/civicflow-service-request-tracker" target="_blank" rel="noreferrer">SOURCE CODE ↗</a>
+          </div>
         </article>
       </div>
     </section>
@@ -2907,7 +3157,7 @@ body.ee-jinx .jinx-home .jinx-hero-bomb{
       line(`Wazuh · SIEM · log analysis · MITRE ATT&CK · Wireshark · Nmap · Nessus · TCP/IP · Python · Linux · NIST CSF · ISO/IEC 27001`);
     },
     projects() {
-      line(`BreachSim · IPS 2.0 · Nessus Vulnerability Assessment · Python Security Toolkit`);
+      line(`BreachSim · IPS 2.0 · Nessus Vulnerability Assessment · Python Security Toolkit · CivicFlow`);
       document.querySelector("#missions")?.scrollIntoView({ behavior: "smooth" });
     },
     github() {
