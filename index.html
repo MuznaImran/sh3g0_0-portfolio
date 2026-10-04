@@ -381,6 +381,59 @@ body.overclock #packetCanvas{opacity:.85}
   #packetCanvas{display:none}
 }
 
+
+/* SH3G0_0 Easter Egg Upgrade */
+.wordmark span{font:700 22px/1 var(--display)!important;letter-spacing:.015em!important;background:linear-gradient(180deg,#ff9be9 0%,#ff5fd1 46%,#e834b6 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-stroke:1px rgba(20,3,28,.35)!important;text-shadow:2px 2px 0 var(--purple),4px 4px 0 var(--blue),6px 6px 0 #120317!important}
+.select-entry.active b{font:700 22px/1 var(--display)!important;background:linear-gradient(180deg,#ff9be9 0%,#ff5fd1 46%,#e834b6 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;text-shadow:2px 2px 0 var(--purple),4px 4px 0 var(--blue),6px 6px 0 #120317!important}
+
+.ee-layer{position:fixed;inset:0;z-index:170;pointer-events:none;opacity:0;visibility:hidden;transition:.25s;overflow:hidden}
+body.ee-jinx .ee-jinx,body.ee-kuromi .ee-kuromi,body.ee-shego .ee-shego{opacity:1;visibility:visible}
+body.ee-jinx main{animation:eeKick 4.8s steps(1) infinite}
+body.ee-jinx .section-title h2{animation:eeGlitch 1.4s steps(2) infinite}
+body.ee-jinx #packetCanvas{opacity:1!important}
+.ee-jinx{background:repeating-linear-gradient(115deg,transparent 0 44px,rgba(255,69,200,.035) 45px 47px,transparent 48px 81px),radial-gradient(circle at 18% 25%,rgba(52,201,255,.13),transparent 24%),radial-gradient(circle at 80% 75%,rgba(255,74,104,.15),transparent 24%)}
+.ee-graf{position:absolute;font-family:var(--scribble);font-weight:700;text-shadow:4px 4px 0 #120317}
+.ee-graf.a{left:3vw;top:15vh;color:#ff45c8;font-size:clamp(34px,6vw,86px);transform:rotate(-12deg)}
+.ee-graf.b{right:4vw;top:28vh;color:#34c9ff;font-size:clamp(26px,5vw,66px);transform:rotate(9deg)}
+.ee-graf.c{left:31vw;bottom:9vh;color:#8cff5a;font-size:clamp(22px,3.4vw,50px);transform:rotate(-4deg)}
+.ee-x{position:absolute;color:#ff4a68;font:700 58px var(--scribble);animation:eePop .65s steps(2) infinite alternate}
+.ee-x.x1{left:12%;bottom:29%}.ee-x.x2{right:17%;top:12%}.ee-x.x3{right:38%;bottom:17%}
+
+body.ee-kuromi{background:radial-gradient(circle at 14% 8%,rgba(255,132,216,.30),transparent 27%),radial-gradient(circle at 82% 16%,rgba(190,128,255,.25),transparent 28%),linear-gradient(180deg,#18051f,#230b31 53%,#0e0715)!important}
+body.ee-kuromi .mission,body.ee-kuromi .inventory-box,body.ee-kuromi .badge-card{border-radius:18px;box-shadow:7px 7px 0 #ff84d8,12px 12px 0 #6d43a7}
+body.ee-kuromi .pixel-btn{border-radius:12px}
+body.ee-kuromi .section-title h2{text-shadow:4px 4px 0 #be80ff,8px 8px 0 #ff84d8}
+.ee-kuromi:before{content:"♡  ★  ♡  ✦  ♡  ★  ♡";position:absolute;left:-8%;right:-8%;top:8%;font:clamp(18px,3vw,34px) var(--pixel);letter-spacing:5vw;color:rgba(255,132,216,.38);animation:eeDrift 12s linear infinite}
+.ee-cute{position:absolute;right:5vw;bottom:7vh;width:min(280px,38vw);aspect-ratio:1;border:4px solid #120317;border-radius:48% 48% 44% 44%;background:linear-gradient(145deg,#2a1136 0 58%,#ff84d8 59% 100%);box-shadow:10px 10px 0 #be80ff,16px 16px 0 rgba(52,201,255,.35);transform:rotate(4deg);display:grid;place-items:center}
+.ee-cute:before,.ee-cute:after{content:"";position:absolute;top:-20%;width:34%;height:55%;background:#2a1136;border:4px solid #120317;z-index:-1}
+.ee-cute:before{left:8%;clip-path:polygon(50% 0,100% 100%,0 100%);transform:rotate(-12deg)}.ee-cute:after{right:8%;clip-path:polygon(50% 0,100% 100%,0 100%);transform:rotate(12deg)}
+.ee-cute .face{font-size:clamp(64px,10vw,130px);filter:drop-shadow(4px 4px 0 #120317)}.ee-cute .bow{position:absolute;top:7%;right:7%;font-size:clamp(34px,5vw,68px)}
+.ee-caption{position:absolute;right:7vw;bottom:3vh;font:clamp(18px,3vw,36px) var(--scribble);color:#ff84d8;text-shadow:3px 3px 0 #120317;transform:rotate(-5deg)}
+
+body.ee-shego{background:radial-gradient(circle at 80% 20%,rgba(140,255,90,.15),transparent 24%),radial-gradient(circle at 18% 75%,rgba(140,255,90,.11),transparent 28%),linear-gradient(180deg,#050907,#0b1410 50%,#08040d)!important}
+body.ee-shego .section-title h2{text-shadow:4px 4px 0 #183d11,8px 8px 0 #8cff5a}
+.ee-shego{background:repeating-linear-gradient(120deg,transparent 0 55px,rgba(140,255,90,.026) 56px 58px)}
+.ee-flame{position:absolute;bottom:-5vh;width:130px;height:260px;background:radial-gradient(ellipse at bottom,#8cff5a 0 12%,#49d52f 20%,rgba(140,255,90,.28) 38%,transparent 68%);filter:blur(7px);animation:eeFlame 1.2s ease-in-out infinite alternate}
+.ee-flame.f1{left:4%}.ee-flame.f2{left:37%;animation-delay:.25s}.ee-flame.f3{right:7%;animation-delay:.5s}
+.ee-shego-tag{position:absolute;right:5vw;top:16vh;padding:10px 14px;background:#8cff5a;color:#081007;border:3px solid #120317;box-shadow:6px 6px 0 #120317;font:clamp(22px,4vw,52px) var(--scribble);transform:rotate(7deg)}
+
+.ee-access{position:fixed;inset:0;z-index:760;display:grid;place-items:center;background:rgba(3,8,5,.94);opacity:0;visibility:hidden;transition:.22s;pointer-events:none}
+.ee-access.show{opacity:1;visibility:visible}
+.ee-access-card{width:min(760px,90vw);padding:34px;border:4px solid #8cff5a;background:#07100a;box-shadow:0 0 0 7px #07100a,0 0 0 10px #ff45c8,13px 13px 0 #34c9ff;text-align:center}
+.ee-access-card small{font:11px var(--pixel);color:#8cff5a}.ee-access-card h2{margin:10px 0;font:clamp(54px,9vw,110px)/.9 var(--display);color:#8cff5a;text-shadow:5px 5px 0 #17450e,10px 10px 0 #ff45c8}.ee-access-card p{font:11px/1.7 var(--pixel);color:#d8c7df}
+
+.ee-game{position:fixed;inset:0;z-index:740;display:grid;place-items:center;padding:18px;background:rgba(3,1,7,.88);backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:.25s}
+.ee-game.open{opacity:1;visibility:visible}
+.ee-game-window{width:min(900px,96vw);border:4px solid #34c9ff;background:#09050e;box-shadow:8px 8px 0 #ff45c8,15px 15px 0 #8d45ff}
+.ee-game-head{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:2px solid #211529;background:#13081b;font:10px var(--pixel);color:#34c9ff}
+.ee-game-head button{border:0;background:transparent;color:#ff4a68;font-size:25px;cursor:pointer}.ee-game-hud{display:flex;justify-content:space-between;gap:14px;padding:9px 14px;background:#0d0812;font:9px var(--pixel);color:#b9a4c1}.ee-game-hud b{color:#8cff5a}
+#eePacketGame{display:block;width:100%;height:auto;max-height:58vh;background:linear-gradient(#080b13,#12051b)}
+.ee-game-help{padding:10px 14px;border-top:1px solid #25172c;color:#8d7997;font:9px/1.6 var(--pixel)}
+.ee-game-result{padding:12px 14px;display:none;background:#0b130c;border-top:2px solid #8cff5a;font:10px/1.6 var(--pixel);color:#dbead8}.ee-game-result.show{display:block}.ee-game-result code{color:#8cff5a;font-weight:700}
+body.ee-root .topbar{box-shadow:0 0 22px rgba(255,214,90,.35);border-bottom-color:#ffd65a}body.ee-root:after{content:"ROOT ACCESS";position:fixed;right:18px;top:88px;z-index:120;padding:7px 10px;background:#ffd65a;color:#130319;border:2px solid #130319;box-shadow:4px 4px 0 #ff45c8;font:9px var(--pixel);transform:rotate(3deg)}
+.ee-root-spark{position:fixed;z-index:165;pointer-events:none;color:#ffd65a;text-shadow:0 0 9px currentColor;animation:eeSpark 1.8s linear forwards}
+@keyframes eeKick{0%,90%,100%{transform:none}91%{transform:translateX(3px)}93%{transform:translateX(-5px)}95%{transform:skewX(-.6deg)}}@keyframes eeGlitch{0%,86%,100%{transform:none}87%{transform:translate(3px,-1px)}90%{transform:translate(-3px,1px)}}@keyframes eePop{to{transform:rotate(14deg) scale(1.2)}}@keyframes eeDrift{to{transform:translateX(14vw)}}@keyframes eeFlame{from{transform:scaleY(.84) rotate(-4deg);opacity:.55}to{transform:scaleY(1.12) rotate(4deg);opacity:.95}}@keyframes eeSpark{to{transform:translateY(-120px) rotate(180deg);opacity:0}}
+
 </style>
 </head>
 <body>
@@ -885,6 +938,13 @@ body.overclock #packetCanvas{opacity:.85}
     <a href="#home">RETURN TO SPAWN ↑</a>
   </footer>
 
+
+  <div class="ee-layer ee-jinx"><div class="ee-graf a">PURE<br>CHAOS!</div><div class="ee-graf b">ERRORS ARE<br>DECORATION</div><div class="ee-graf c">★ BOOM // GLITCH // RUN ★</div><span class="ee-x x1">✕</span><span class="ee-x x2">✕</span><span class="ee-x x3">✕</span></div>
+  <div class="ee-layer ee-kuromi"><div class="ee-cute"><span class="face">☠</span><span class="bow">🎀</span></div><div class="ee-caption">KUROMI MODE ♡<br>CUTE MENACE ENABLED</div></div>
+  <div class="ee-layer ee-shego"><span class="ee-flame f1"></span><span class="ee-flame f2"></span><span class="ee-flame f3"></span><div class="ee-shego-tag">ACID GREEN<br>ONLINE</div></div>
+  <div class="ee-access" id="eeAccess"><div class="ee-access-card"><small>SH3G0_OS // PRIVILEGE ESCALATION</small><h2>ACCESS GRANTED</h2><p id="eeAccessMsg">hidden route discovered</p></div></div>
+  <div class="ee-game" id="eeGame"><div class="ee-game-window"><div class="ee-game-head"><span>SECRET LEVEL // PACKET PANIC</span><button id="eeGameClose">×</button></div><div class="ee-game-hud"><span>GOOD PACKETS: <b id="eeScore">0</b>/12</span><span>INTEGRITY: <b id="eeLives">3</b></span><span>STATUS: <b id="eeStatus">READY</b></span></div><canvas id="eePacketGame" width="860" height="440"></canvas><div class="ee-game-help">MOVE: ← → or A / D // COLLECT GREEN PACKETS // AVOID RED MALWARE // GET 12 TO CAPTURE THE FLAG</div><div class="ee-game-result" id="eeResult"></div></div></div>
+
   <!-- SECRET CONSOLE -->
   <div class="console-modal" id="consoleModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="consoleTitle">
     <div class="console-window">
@@ -1382,6 +1442,82 @@ body.overclock #packetCanvas{opacity:.85}
   window.addEventListener("beforeunload", () => {
     if (resumeBlobUrl) URL.revokeObjectURL(resumeBlobUrl);
   });
+})();
+</script>
+
+
+<script>
+(() => {
+  if (window.__SH3G0_EE_V2) return;
+  window.__SH3G0_EE_V2 = true;
+  const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
+  const toast=t=>window.SH3G0?.showToast?.(t);
+
+  function access(msg,d=1500){
+    const o=q("#eeAccess"),m=q("#eeAccessMsg"); if(!o)return;
+    if(m)m.textContent=msg; o.classList.add("show");
+    setTimeout(()=>o.classList.remove("show"),d);
+  }
+  function mode(name){
+    document.body.classList.remove("ee-jinx","ee-kuromi","ee-shego");
+    if(name)document.body.classList.add("ee-"+name);
+    access(name==="jinx"?"CHAOS PROFILE LOADED":name==="kuromi"?"CUTE MENACE PROFILE LOADED":"ACID GREEN PROFILE LOADED",900);
+    toast((name||"DEFAULT").toUpperCase()+" MODE // LOADED");
+  }
+  function rootUnlock(){
+    localStorage.setItem("sh3g0_root","1"); document.body.classList.add("ee-root");
+    access("FLAG VERIFIED // ROOT ACCESS UNLOCKED",1900); toast("ROOT MODE // UNLOCKED");
+    for(let i=0;i<28;i++)setTimeout(()=>{const s=document.createElement("span");s.className="ee-root-spark";s.textContent=Math.random()>.5?"✦":"★";s.style.left=Math.random()*100+"vw";s.style.top=(60+Math.random()*35)+"vh";s.style.fontSize=(10+Math.random()*18)+"px";document.body.appendChild(s);setTimeout(()=>s.remove(),1900)},i*45);
+  }
+  if(localStorage.getItem("sh3g0_root")==="1")document.body.classList.add("ee-root");
+
+  // Intercept special console commands before the original handler.
+  q("#consoleForm")?.addEventListener("submit",e=>{
+    const inp=q("#consoleInput"); if(!inp)return;
+    const raw=inp.value.trim(), key=raw.toLowerCase();
+    const handled=["jinx","shego","kuromi","default","play","sh3g0{packet_queen}"];
+    if(!handled.includes(key))return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    const out=q("#consoleOutput");
+    if(out){const p=document.createElement("p");p.innerHTML='<span class="prompt">root@arcade:~$</span> '+raw;out.appendChild(p);}
+    if(key==="jinx"){mode("jinx");q("#consoleModal")?.classList.remove("open")}
+    if(key==="shego"){mode("shego");q("#consoleModal")?.classList.remove("open")}
+    if(key==="kuromi"){mode("kuromi");q("#consoleModal")?.classList.remove("open")}
+    if(key==="default"){mode(null);document.body.classList.remove("ee-root")}
+    if(key==="play"){localStorage.getItem("sh3g0_game_unlocked")==="1"?openGame():line("secret level locked // old-school input required")}
+    if(key==="sh3g0{packet_queen}"){rootUnlock();line("FLAG ACCEPTED // PACKET QUEEN achievement unlocked")}
+    inp.value="";
+    function line(t){if(!out)return;const p=document.createElement("p");p.textContent=t;out.appendChild(p);out.scrollTop=out.scrollHeight}
+  },true);
+
+  // Five emblem clicks reveals the clue.
+  let clicks=0,timer=0;
+  qa(".emblem,.machine-screen img,.wordmark img").forEach(el=>el.addEventListener("click",()=>{
+    clicks++;clearTimeout(timer);timer=setTimeout(()=>clicks=0,2200);
+    if(clicks>=5){clicks=0;access("HIDDEN ROUTE FOUND // TRY AN OLD-SCHOOL CHEAT CODE",1800);toast("SECRET ROUTE // DISCOVERED")}
+  }));
+
+  // Reliable Konami code: ↑ ↑ ↓ ↓ ← → ← → B A
+  const seq=["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","KeyB","KeyA"]; let ki=0;
+  window.addEventListener("keydown",e=>{
+    if(q("#eeGame")?.classList.contains("open"))return;
+    const code=e.code||e.key;
+    if(code===seq[ki]){if(ki<8)e.preventDefault();ki++;if(ki===seq.length){ki=0;localStorage.setItem("sh3g0_game_unlocked","1");access("CHEAT CODE ACCEPTED // SECRET LEVEL UNLOCKED",1700);toast("SECRET LEVEL // PACKET PANIC");setTimeout(openGame,800)}}else ki=code===seq[0]?1:0;
+  },true);
+
+  const modal=q("#eeGame"),canvas=q("#eePacketGame"),ctx=canvas?.getContext("2d"),scoreEl=q("#eeScore"),livesEl=q("#eeLives"),statusEl=q("#eeStatus"),result=q("#eeResult");
+  let running=false,raf=0,keys={},player=null,drops=[],score=0,lives=3,last=0;
+  q("#eeGameClose")?.addEventListener("click",closeGame);
+  function openGame(){if(!modal||!ctx)return;modal.classList.add("open");reset()}
+  function closeGame(){running=false;cancelAnimationFrame(raf);modal?.classList.remove("open")}
+  function reset(){player={x:402,y:385,w:56,h:22,s:7};drops=[];score=0;lives=3;last=0;running=true;scoreEl.textContent="0";livesEl.textContent="3";statusEl.textContent="RUNNING";result.classList.remove("show");result.innerHTML="";cancelAnimationFrame(raf);loop(0)}
+  window.addEventListener("keydown",e=>{if(!running)return;if(["ArrowLeft","ArrowRight","KeyA","KeyD"].includes(e.code))e.preventDefault();keys[e.code]=true},true);
+  window.addEventListener("keyup",e=>keys[e.code]=false,true);
+  canvas?.addEventListener("click",()=>{if(!running)reset()});
+  function spawn(t){if(t-last<520)return;last=t;const bad=Math.random()<.34;drops.push({x:18+Math.random()*824,y:-16,r:9+Math.random()*5,v:2.5+Math.random()*2.2,bad})}
+  function hit(a,b){return a.x<b.x+b.r&&a.x+a.w>b.x-b.r&&a.y<b.y+b.r&&a.y+a.h>b.y-b.r}
+  function finish(win){running=false;statusEl.textContent=win?"CLEARED":"FAILED";result.classList.add("show");result.innerHTML=win?'MISSION CLEAR // FLAG CAPTURED: <code>SH3G0{PACKET_QUEEN}</code><br>Enter the flag exactly into the secret console.':'CONNECTION DROPPED // click the game area to retry.';if(win)toast("FLAG CAPTURED // CHECK GAME WINDOW")}
+  function loop(t){if(!running)return;ctx.clearRect(0,0,860,440);const g=ctx.createLinearGradient(0,0,0,440);g.addColorStop(0,"#07121b");g.addColorStop(1,"#17051e");ctx.fillStyle=g;ctx.fillRect(0,0,860,440);ctx.strokeStyle="rgba(52,201,255,.08)";for(let x=0;x<860;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,440);ctx.stroke()}for(let y=0;y<440;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(860,y);ctx.stroke()}if(keys.ArrowLeft||keys.KeyA)player.x-=player.s;if(keys.ArrowRight||keys.KeyD)player.x+=player.s;player.x=Math.max(0,Math.min(804,player.x));spawn(t);for(let i=drops.length-1;i>=0;i--){const p=drops[i];p.y+=p.v;ctx.shadowBlur=14;ctx.shadowColor=p.bad?"#ff4a68":"#8cff5a";ctx.fillStyle=p.bad?"#ff4a68":"#8cff5a";ctx.fillRect(p.x-p.r,p.y-p.r,p.r*2,p.r*2);ctx.shadowBlur=0;if(hit(player,p)){drops.splice(i,1);if(p.bad){lives--;livesEl.textContent=lives;if(lives<=0){finish(false);break}}else{score++;scoreEl.textContent=score;if(score>=12){finish(true);break}}}else if(p.y>460)drops.splice(i,1)}ctx.shadowBlur=16;ctx.shadowColor="#34c9ff";ctx.fillStyle="#34c9ff";ctx.fillRect(player.x,player.y,player.w,player.h);ctx.shadowBlur=0;ctx.fillStyle="#ff45c8";ctx.fillRect(player.x+8,player.y-8,player.w-16,8);ctx.fillStyle="#fff";ctx.font="bold 12px monospace";ctx.fillText("SH3",player.x+15,player.y+16);if(running)raf=requestAnimationFrame(loop)}
 })();
 </script>
 
