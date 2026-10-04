@@ -4,6 +4,8 @@
 
 This repository contains my personal cybersecurity portfolio, built around my operator handle **SH3G0_0**.
 
+🎮 **Live site:** https://muznaimran.github.io/sh3g0_0-portfolio/
+
 The site is intentionally different from a standard corporate portfolio: it uses a **retro arcade / CRT / cyber-zine aesthetic** with pink, purple and electric blue as the core palette, plus controlled acid-green and red highlights for interaction states.
 
 ## 🎮 Portfolio concept
@@ -70,7 +72,7 @@ Key elements include:
 
 - [GitHub](https://github.com/MuznaImran)
 - [LinkedIn](https://www.linkedin.com/in/muzna-imran/)
-- Portfolio deployment: **coming from this repository**
+- **Live portfolio:** https://muznaimran.github.io/sh3g0_0-portfolio/
 
 ---
 
