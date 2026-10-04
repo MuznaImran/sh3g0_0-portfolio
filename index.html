@@ -1270,6 +1270,173 @@ body.ee-jinx .section{
   }
 }
 
+
+/* ===== JINX POLISH v5 ===== */
+/* Make the whole interface read as a deliberate alternate skin, not only an art overlay. */
+body.ee-jinx .status-strip span:last-child{display:none}
+body.ee-jinx .status-strip:after{
+  content:"CHAOS: UNFILTERED";
+  color:var(--jinx-pink);
+  text-shadow:0 0 10px rgba(255,59,189,.65);
+  font-weight:900;
+}
+body.ee-jinx .hud{
+  border-color:var(--jinx-blue)!important;
+  background:rgba(12,5,20,.92)!important;
+  box-shadow:4px 4px 0 rgba(255,59,189,.38),0 0 22px rgba(47,214,255,.08)!important;
+}
+body.ee-jinx .hud:before{
+  content:"JINX //";
+  color:var(--jinx-pink);
+  font:8px var(--pixel);
+  letter-spacing:.08em;
+  text-shadow:2px 2px 0 #100614;
+}
+body.ee-jinx #consoleButton{
+  border-color:var(--jinx-pink)!important;
+  color:var(--jinx-blue)!important;
+}
+body.ee-jinx #consoleButton:hover{
+  background:var(--jinx-pink)!important;
+  color:#100614!important;
+  box-shadow:3px 3px 0 var(--jinx-blue)!important;
+}
+
+body.ee-jinx .hero-copy h1{
+  transform:skewX(-2deg) rotate(-.35deg);
+  text-shadow:
+    4px 4px 0 var(--jinx-purple),
+    8px 8px 0 rgba(47,214,255,.72),
+    0 0 22px rgba(255,59,189,.18)!important;
+}
+body.ee-jinx .hero-copy h1 span{color:#f8f4ff!important}
+body.ee-jinx .hero-copy h1 em{color:var(--jinx-pink)!important}
+body.ee-jinx .hero-copy .tagline{
+  color:var(--jinx-blue)!important;
+  text-shadow:2px 2px 0 #120518;
+}
+body.ee-jinx .hero-text{
+  border-left:4px solid var(--jinx-pink);
+  padding-left:14px;
+  background:linear-gradient(90deg,rgba(255,59,189,.08),transparent 72%);
+}
+body.ee-jinx .micro-stats>div{
+  border-color:#432454!important;
+  background:rgba(17,7,27,.80)!important;
+}
+body.ee-jinx .micro-stats b{
+  color:var(--jinx-blue)!important;
+  text-shadow:2px 2px 0 rgba(255,59,189,.65);
+}
+
+body.ee-jinx .pixel-btn{
+  border-color:var(--jinx-blue)!important;
+  background:#13091d!important;
+  color:#f9f2ff!important;
+  box-shadow:4px 4px 0 rgba(135,80,255,.58)!important;
+}
+body.ee-jinx .pixel-btn.primary{
+  background:var(--jinx-pink)!important;
+  border-color:#17071f!important;
+  color:#15051c!important;
+  box-shadow:5px 5px 0 var(--jinx-blue)!important;
+}
+body.ee-jinx .pixel-btn.primary:hover{
+  background:var(--jinx-blue)!important;
+  box-shadow:5px 5px 0 var(--jinx-pink)!important;
+}
+
+body.ee-jinx .zine-card,
+body.ee-jinx .terminal-card,
+body.ee-jinx .quote-card,
+body.ee-jinx .mission,
+body.ee-jinx .campaign-row,
+body.ee-jinx .badge-card,
+body.ee-jinx .evidence-cache,
+body.ee-jinx .inventory-box,
+body.ee-jinx .final-panel{
+  border-color:#432454!important;
+  box-shadow:5px 5px 0 rgba(135,80,255,.18);
+}
+body.ee-jinx .zine-card,
+body.ee-jinx .quote-card,
+body.ee-jinx .final-panel{
+  background-image:
+    linear-gradient(135deg,rgba(255,59,189,.045),transparent 30%),
+    linear-gradient(315deg,rgba(47,214,255,.035),transparent 33%)!important;
+}
+body.ee-jinx .terminal-head,
+body.ee-jinx .machine-header{
+  border-bottom-color:var(--jinx-pink)!important;
+  background:linear-gradient(90deg,rgba(255,59,189,.17),rgba(47,214,255,.07))!important;
+}
+body.ee-jinx .terminal-body b,
+body.ee-jinx .machine-copy em{color:var(--jinx-blue)!important}
+body.ee-jinx .hot-text{color:var(--jinx-pink)!important}
+
+body.ee-jinx .level-no{
+  color:#100614!important;
+  background:var(--jinx-blue)!important;
+  border-color:#100614!important;
+  box-shadow:4px 4px 0 var(--jinx-pink)!important;
+}
+body.ee-jinx .section-title{overflow:visible}
+body.ee-jinx .section-title:after{
+  content:"////";
+  position:absolute;
+  right:0;
+  top:-8px;
+  color:var(--jinx-pink);
+  font:700 clamp(18px,2.3vw,34px) var(--scribble);
+  letter-spacing:-.08em;
+  transform:rotate(8deg);
+  text-shadow:3px 3px 0 #100614,0 0 12px rgba(255,59,189,.42);
+  opacity:.76;
+}
+
+body.ee-jinx .jinx-art{
+  animation:jinxStickerFloat 2.8s steps(2,end) infinite alternate;
+}
+body.ee-jinx .jinx-shark,
+body.ee-jinx .jinx-burst,
+body.ee-jinx .jinx-bomb{animation-delay:-1.1s}
+body.ee-jinx .jinx-crown,
+body.ee-jinx .jinx-eye-crown,
+body.ee-jinx .jinx-ha-cascade{animation-delay:-1.8s}
+body.ee-jinx .section:hover .jinx-art{
+  filter:drop-shadow(8px 9px 0 rgba(10,3,17,.66)) drop-shadow(0 0 18px rgba(47,214,255,.20));
+}
+@keyframes jinxStickerFloat{
+  from{translate:0 0}
+  to{translate:0 -5px}
+}
+
+body.ee-jinx .screen-sticker{
+  background:var(--jinx-blue)!important;
+  color:#100614!important;
+  border-color:#100614!important;
+  transform:rotate(-7deg)!important;
+}
+body.ee-jinx .arcade-buttons i:first-child{
+  background:var(--jinx-pink)!important;
+  box-shadow:0 0 12px rgba(255,59,189,.35);
+}
+body.ee-jinx .arcade-buttons i:last-child{
+  background:var(--jinx-blue)!important;
+  box-shadow:0 0 12px rgba(47,214,255,.35);
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.ee-jinx .jinx-art,
+  body.ee-jinx .jinx-achievement-girl img,
+  body.ee-jinx .section-title h2{animation:none!important}
+}
+@media(max-width:760px){
+  body.ee-jinx .hud:before{display:none}
+  body.ee-jinx .section-title:after{font-size:18px;right:4px;top:-2px}
+  body.ee-jinx .hero-copy h1{transform:none}
+}
+
 </style>
 </head>
 <body>
