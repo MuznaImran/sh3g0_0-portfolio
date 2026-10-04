@@ -909,6 +909,190 @@ body.ee-kuromi .inventory-box:hover:before{
   .kuromi-heart-cloud .h1{width:30px}.kuromi-heart-cloud .h2{width:25px}
 }
 
+
+/* ===== JINX MODE v3: section-embedded graffiti chaos ===== */
+.ee-layer.ee-jinx{display:none!important}
+
+body.ee-jinx{
+  --jinx-pink:#ff3bbd;
+  --jinx-blue:#2fd6ff;
+  --jinx-purple:#8750ff;
+  --jinx-green:#9bff54;
+  --jinx-red:#ff4d68;
+  background:
+    radial-gradient(circle at 13% 8%,rgba(255,59,189,.20),transparent 24%),
+    radial-gradient(circle at 85% 15%,rgba(47,214,255,.17),transparent 24%),
+    linear-gradient(180deg,#0d0615 0%,#16061f 46%,#060912 100%)!important;
+  filter:saturate(1.14) contrast(1.04);
+}
+
+body.ee-jinx .topbar{
+  background:rgba(8,5,15,.92)!important;
+  border-bottom-color:var(--jinx-pink)!important;
+  box-shadow:0 4px 0 rgba(47,214,255,.28),0 10px 22px rgba(255,59,189,.08)!important;
+}
+body.ee-jinx .topbar:after{
+  content:"// CHAOS CHANNEL OPEN //";
+  position:absolute;left:50%;bottom:-17px;
+  transform:translateX(-50%) rotate(-1deg);
+  padding:3px 8px;
+  background:var(--jinx-pink);
+  color:#100614;border:2px solid #100614;
+  font:8px var(--pixel);
+  box-shadow:3px 3px 0 var(--jinx-blue);
+}
+
+body.ee-jinx .section{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+body.ee-jinx .section:after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  width:clamp(220px,29vw,430px);
+  height:clamp(180px,23vw,350px);
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 23% 42%,rgba(255,59,189,.64) 0 4%,transparent 5%),
+    radial-gradient(circle at 44% 17%,rgba(47,214,255,.56) 0 3.5%,transparent 4.5%),
+    radial-gradient(circle at 63% 60%,rgba(135,80,255,.46) 0 5%,transparent 6%),
+    radial-gradient(circle at 77% 29%,rgba(155,255,84,.35) 0 2.8%,transparent 3.8%),
+    radial-gradient(ellipse at center,rgba(255,59,189,.11),transparent 64%);
+  filter:drop-shadow(0 0 18px rgba(255,59,189,.13));
+  opacity:.88;
+}
+body.ee-jinx .section:nth-of-type(odd):after{right:-8vw;top:15%;transform:rotate(12deg)}
+body.ee-jinx .section:nth-of-type(even):after{left:-8vw;bottom:8%;transform:rotate(-16deg)}
+
+body.ee-jinx .section-title h2{
+  text-shadow:4px 4px 0 var(--jinx-purple),8px 8px 0 var(--jinx-blue)!important;
+  animation:jinxHeaderGlitch 1.7s steps(2,end) infinite;
+}
+body.ee-jinx .section-title p,
+body.ee-jinx .kicker,
+body.ee-jinx .tiny-label{color:#d9ecff!important}
+
+.jinx-deco{
+  display:none;
+  position:absolute;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+}
+body.ee-jinx .jinx-deco{display:block}
+
+.jinx-tag{
+  position:absolute;
+  font-family:var(--scribble);
+  font-weight:700;
+  line-height:.85;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  text-shadow:3px 3px 0 #110416,0 0 14px currentColor;
+  mix-blend-mode:screen;
+}
+.jinx-mark{
+  position:absolute;
+  font:700 clamp(30px,4vw,58px) var(--scribble);
+  color:var(--jinx-red);
+  text-shadow:3px 3px 0 #110416,0 0 12px currentColor;
+  animation:jinxMarkPop .7s steps(2,end) infinite alternate;
+}
+
+.jinx-home .jt1{left:1.5%;top:18%;font-size:clamp(30px,5.2vw,76px);color:var(--jinx-pink);transform:rotate(-10deg)}
+.jinx-home .jt2{right:3%;top:22%;font-size:clamp(36px,6vw,88px);color:var(--jinx-blue);transform:rotate(8deg)}
+.jinx-home .jm1{left:18%;bottom:14%}.jinx-home .jm2{right:24%;bottom:8%;color:var(--jinx-green)}
+
+.jinx-profile .jt1{left:1%;top:17%;font-size:clamp(20px,3.2vw,44px);color:var(--jinx-pink);transform:rotate(-8deg)}
+.jinx-profile .jt2{right:2%;bottom:13%;font-size:clamp(19px,3vw,40px);color:var(--jinx-blue);transform:rotate(7deg)}
+.jinx-profile .jm1{right:14%;top:14%;color:var(--jinx-green)}
+
+.jinx-missions .jt1{right:2%;top:12%;font-size:clamp(34px,5vw,70px);color:var(--jinx-blue);transform:rotate(10deg)}
+.jinx-missions .jt2{left:1.5%;bottom:8%;font-size:clamp(18px,2.8vw,38px);color:var(--jinx-pink);transform:rotate(-7deg)}
+.jinx-missions .jm1{left:10%;top:9%}.jinx-missions .jm2{right:21%;bottom:8%;color:var(--jinx-green)}
+
+.jinx-experience .jt1{left:2%;bottom:12%;font-size:clamp(20px,3vw,42px);color:var(--jinx-green);transform:rotate(-5deg)}
+.jinx-experience .jt2{right:3%;top:16%;font-size:clamp(22px,3.2vw,44px);color:var(--jinx-pink);transform:rotate(8deg)}
+.jinx-experience .jm1{left:42%;top:7%;color:var(--jinx-blue)}
+
+.jinx-wins .jt1{right:3%;top:12%;font-size:clamp(23px,3.5vw,48px);color:var(--jinx-pink);transform:rotate(7deg)}
+.jinx-wins .jt2{left:1%;bottom:10%;font-size:clamp(20px,3vw,42px);color:var(--jinx-blue);transform:rotate(-6deg)}
+.jinx-wins .jm1{right:28%;bottom:8%}
+
+.jinx-skills .jt1{left:1%;top:31%;font-size:clamp(20px,3vw,43px);color:var(--jinx-pink);transform:rotate(-8deg)}
+.jinx-skills .jt2{right:2%;bottom:9%;font-size:clamp(20px,3vw,40px);color:var(--jinx-green);transform:rotate(6deg)}
+.jinx-skills .jm1{right:17%;top:13%;color:var(--jinx-blue)}
+
+.jinx-contact .jt1{left:2%;top:14%;font-size:clamp(23px,3.4vw,48px);color:var(--jinx-green);transform:rotate(-7deg)}
+.jinx-contact .jt2{right:3%;bottom:9%;font-size:clamp(20px,3vw,42px);color:var(--jinx-pink);transform:rotate(7deg)}
+.jinx-contact .jm1{left:38%;bottom:7%;color:var(--jinx-blue)}
+
+body.ee-jinx .mission,
+body.ee-jinx .badge-card,
+body.ee-jinx .inventory-box,
+body.ee-jinx .campaign-row{
+  border-color:#2a1534!important;
+  background-image:
+    repeating-linear-gradient(118deg,transparent 0 27px,rgba(255,59,189,.027) 28px 30px,transparent 31px 56px)!important;
+}
+body.ee-jinx .mission:nth-child(odd),
+body.ee-jinx .badge-card:nth-child(odd){transform:rotate(-.55deg)}
+body.ee-jinx .mission:nth-child(even),
+body.ee-jinx .badge-card:nth-child(even){transform:rotate(.55deg)}
+body.ee-jinx .mission:hover,
+body.ee-jinx .badge-card:hover,
+body.ee-jinx .inventory-box:hover{
+  transform:translate(-4px,-4px) rotate(-.6deg) scale(1.012);
+  box-shadow:8px 8px 0 var(--jinx-pink),13px 13px 0 var(--jinx-blue)!important;
+}
+body.ee-jinx .pixel-btn:hover{
+  background:var(--jinx-pink)!important;
+  color:#0d0512!important;
+  box-shadow:5px 5px 0 var(--jinx-blue)!important;
+}
+
+body.ee-jinx .hero:before{
+  content:"";
+  position:absolute;left:9%;right:10%;bottom:11%;
+  height:7px;z-index:3;
+  background:linear-gradient(90deg,var(--jinx-pink),var(--jinx-blue),var(--jinx-green),var(--jinx-red));
+  transform:rotate(-1.8deg);
+  box-shadow:0 6px 0 #110416;
+}
+body.ee-jinx .hero-machine{
+  box-shadow:9px 9px 0 var(--jinx-purple),15px 15px 0 var(--jinx-blue)!important;
+}
+body.ee-jinx .machine-screen:after{
+  content:"NO SIGNAL // GOOD.";
+  position:absolute;
+  right:7px;bottom:8px;
+  padding:3px 6px;
+  background:var(--jinx-pink);
+  color:#110416;
+  border:2px solid #110416;
+  font:8px var(--pixel);
+  transform:rotate(-3deg);
+}
+body.ee-jinx .cursor-spark{color:var(--jinx-blue)!important;text-shadow:0 0 10px var(--jinx-blue)!important}
+
+@keyframes jinxHeaderGlitch{
+  0%,82%,100%{transform:none;filter:none}
+  84%{transform:translate(3px,-1px);filter:hue-rotate(16deg)}
+  87%{transform:translate(-4px,1px)}
+  90%{transform:skewX(-1deg)}
+}
+@keyframes jinxMarkPop{
+  from{transform:rotate(-7deg) scale(.92)}
+  to{transform:rotate(8deg) scale(1.1)}
+}
+@media(max-width:760px){
+  .jinx-tag{opacity:.55}
+  .jinx-tag.jt2{display:none}
+  .jinx-mark{font-size:28px}
+}
+
 </style>
 </head>
 <body>
@@ -1029,6 +1213,12 @@ body.ee-kuromi .inventory-box:hover:before{
   <main>
     <!-- HERO -->
     <section class="hero section" id="home" data-stage="SPAWN">
+      <div class="jinx-deco jinx-home" aria-hidden="true">
+        <span class="jinx-tag jt1">PURE CHAOS</span>
+        <span class="jinx-tag jt2">X_X</span>
+        <span class="jinx-mark jm1">✕</span>
+        <span class="jinx-mark jm2">★</span>
+      </div>
       <div class="kuromi-heart-cloud heart-cloud-home" aria-hidden="true">
         <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
         <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
@@ -1092,6 +1282,11 @@ body.ee-kuromi .inventory-box:hover:before{
 
     <!-- PROFILE -->
     <section class="section section-pad" id="profile" data-stage="PLAYER CARD">
+      <div class="jinx-deco jinx-profile" aria-hidden="true">
+        <span class="jinx-tag jt1">NO RULES // JUST SIGNAL</span>
+        <span class="jinx-tag jt2">LOOK CLOSER →</span>
+        <span class="jinx-mark jm1">✦</span>
+      </div>
       <img class="kuromi-heart-img kh1" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="" aria-hidden="true"><span class="pixel-heart-sprite alt kh2"></span>
       <div class="section-title reveal">
         <span class="level-no">STAGE 01</span>
@@ -1147,6 +1342,11 @@ body.ee-kuromi .inventory-box:hover:before{
 
     <!-- PROJECTS -->
     <section class="section section-pad" id="missions" data-stage="MISSION SELECT">
+      <div class="jinx-deco jinx-missions" aria-hidden="true">
+        <span class="jinx-tag jt1">BOOM!</span>
+        <span class="jinx-tag jt2">BUILD // BREAK // REPEAT</span>
+        <span class="jinx-mark jm1">✕</span><span class="jinx-mark jm2">✕</span>
+      </div>
       <div class="kuromi-heart-cloud heart-cloud-missions" aria-hidden="true">
         <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
         <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
@@ -1234,6 +1434,11 @@ body.ee-kuromi .inventory-box:hover:before{
 
     <!-- EXPERIENCE -->
     <section class="section section-pad" id="experience" data-stage="CAMPAIGN">
+      <div class="jinx-deco jinx-experience" aria-hidden="true">
+        <span class="jinx-tag jt1">CHAOS IS A TOOL</span>
+        <span class="jinx-tag jt2">RUN IT BACK</span>
+        <span class="jinx-mark jm1">★</span>
+      </div>
       <div class="kuromi-heart-cloud heart-cloud-experience" aria-hidden="true">
         <img class="kuromi-heart-img h-goth h1" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="">
         <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
@@ -1282,6 +1487,11 @@ body.ee-kuromi .inventory-box:hover:before{
 
     <!-- ACHIEVEMENTS / CTF -->
     <section class="section section-pad" id="wins" data-stage="UNLOCKS">
+      <div class="jinx-deco jinx-wins" aria-hidden="true">
+        <span class="jinx-tag jt1">BOSS CLEARED</span>
+        <span class="jinx-tag jt2">MAKE SOME NOISE</span>
+        <span class="jinx-mark jm1">✕</span>
+      </div>
       <div class="kuromi-heart-cloud heart-cloud-wins" aria-hidden="true">
         <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
         <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
@@ -1355,6 +1565,11 @@ body.ee-kuromi .inventory-box:hover:before{
 
     <!-- SKILLS -->
     <section class="section section-pad" id="skills" data-stage="INVENTORY">
+      <div class="jinx-deco jinx-skills" aria-hidden="true">
+        <span class="jinx-tag jt1">GLITCH THE SYSTEM</span>
+        <span class="jinx-tag jt2">TOOLS ≠ TALENT</span>
+        <span class="jinx-mark jm1">✦</span>
+      </div>
       <div class="kuromi-heart-cloud heart-cloud-skills" aria-hidden="true">
         <img class="kuromi-heart-img h-lilac h1" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="">
         <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
@@ -1422,6 +1637,11 @@ body.ee-kuromi .inventory-box:hover:before{
 
     <!-- CONTACT -->
     <section class="section section-pad final-stage" id="contact" data-stage="CONNECT">
+      <div class="jinx-deco jinx-contact" aria-hidden="true">
+        <span class="jinx-tag jt1">ONE MORE QUEST?</span>
+        <span class="jinx-tag jt2">SEE YOU IN THE NOISE</span>
+        <span class="jinx-mark jm1">★</span>
+      </div>
       <div class="kuromi-heart-cloud heart-cloud-contact" aria-hidden="true">
         <img class="kuromi-heart-img h-pink h1" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
         <img class="kuromi-heart-img h-lilac h2" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="">
@@ -1464,7 +1684,6 @@ body.ee-kuromi .inventory-box:hover:before{
   </footer>
 
 
-  <div class="ee-layer ee-jinx"><div class="ee-graf a">PURE<br>CHAOS!</div><div class="ee-graf b">ERRORS ARE<br>DECORATION</div><div class="ee-graf c">★ BOOM // GLITCH // RUN ★</div><span class="ee-x x1">✕</span><span class="ee-x x2">✕</span><span class="ee-x x3">✕</span></div>
   <div class="ee-layer ee-shego"><span class="ee-flame f1"></span><span class="ee-flame f2"></span><span class="ee-flame f3"></span><div class="ee-shego-tag">ACID GREEN<br>ONLINE</div></div>
   <div class="ee-access" id="eeAccess"><div class="ee-access-card"><small>SH3G0_OS // PRIVILEGE ESCALATION</small><h2>ACCESS GRANTED</h2><p id="eeAccessMsg">hidden route discovered</p></div></div>
   <div class="ee-game" id="eeGame"><div class="ee-game-window"><div class="ee-game-head"><span>SECRET LEVEL // PACKET PANIC</span><button id="eeGameClose">×</button></div><div class="ee-game-hud"><span>GOOD PACKETS: <b id="eeScore">0</b>/12</span><span>INTEGRITY: <b id="eeLives">3</b></span><span>STATUS: <b id="eeStatus">READY</b></span></div><canvas id="eePacketGame" width="860" height="440"></canvas><div class="ee-game-help">MOVE: ← → or A / D // COLLECT GREEN PACKETS // AVOID RED MALWARE // GET 12 TO CAPTURE THE FLAG</div><div class="ee-game-result" id="eeResult"></div></div></div>
