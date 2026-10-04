@@ -463,6 +463,101 @@ body.ee-root .topbar{box-shadow:0 0 22px rgba(255,214,90,.35);border-bottom-colo
 .ee-root-spark{position:fixed;z-index:165;pointer-events:none;color:#ffd65a;text-shadow:0 0 9px currentColor;animation:eeSpark 1.8s linear forwards}
 @keyframes eeKick{0%,90%,100%{transform:none}91%{transform:translateX(3px)}93%{transform:translateX(-5px)}95%{transform:skewX(-.6deg)}}@keyframes eeGlitch{0%,86%,100%{transform:none}87%{transform:translate(3px,-1px)}90%{transform:translate(-3px,1px)}}@keyframes eePop{to{transform:rotate(14deg) scale(1.2)}}@keyframes eeDrift{to{transform:translateX(14vw)}}@keyframes eeFlame{from{transform:scaleY(.84) rotate(-4deg);opacity:.55}to{transform:scaleY(1.12) rotate(4deg);opacity:.95}}@keyframes eeSpark{to{transform:translateY(-120px) rotate(180deg);opacity:0}}
 
+
+/* ===== EXACT APPROVED SH3G0_0 BRANDING RESTORE ===== */
+/* Top logo: original pixel treatment */
+.wordmark{
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  white-space:nowrap!important;
+  font:700 19px var(--pixel)!important;
+  color:#ff83dd!important;
+  text-shadow:2px 2px 0 #8d45ff!important;
+}
+.wordmark span{
+  position:static!important;
+  font:inherit!important;
+  letter-spacing:normal!important;
+  color:#ff83dd!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:2px 2px 0 #8d45ff!important;
+  filter:none!important;
+}
+
+/* Character-select handle: same original pixel language */
+.select-entry.active b{
+  font-family:var(--pixel)!important;
+  font-size:18px!important;
+  line-height:normal!important;
+  letter-spacing:normal!important;
+  color:#ff83dd!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:none!important;
+}
+
+/* Player-card handle: original smooth arcade wordmark */
+.operative-name h1{
+  margin:0!important;
+  font:66px/.9 var(--display)!important;
+  letter-spacing:normal!important;
+  color:#ff45c8!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:4px 4px 0 #8d45ff,7px 7px 0 #34c9ff!important;
+}
+
+/* Main hero: exact original colors and shadow stack from the approved version */
+.hero h1{
+  margin:2px 0 0!important;
+  font:clamp(78px,12vw,170px)/.84 var(--display)!important;
+  letter-spacing:.01em!important;
+  transform:skewY(-2deg)!important;
+  display:inline-flex!important;
+  align-items:flex-end!important;
+  gap:0!important;
+  padding-bottom:0!important;
+}
+.hero h1 span{
+  color:#ff45c8!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:4px 4px 0 #8d45ff,8px 8px 0 #34c9ff!important;
+}
+.hero h1 em{
+  position:static!important;
+  font-style:normal!important;
+  color:#8cff5a!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:4px 4px 0 #2d7514!important;
+}
+.hero h1 em:after{display:none!important}
+
+/* Small CRT/operator label: original pixel treatment */
+.machine-copy b{
+  font:18px var(--pixel)!important;
+  letter-spacing:normal!important;
+  color:#ff83dd!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:none!important;
+}
+
 </style>
 </head>
 <body>
