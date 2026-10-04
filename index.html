@@ -1899,6 +1899,127 @@ body.ee-jinx .micro-stats>div{
   }
 }
 
+
+/* ===== JINX CLEAN PASS v11 ===== */
+/* Foreground means foreground: lift the entire Jinx decoration layer above hero UI. */
+body.ee-jinx .jinx-home{
+  z-index:12!important;
+}
+
+/* Image graffiti only. The text tags were making the skin feel crowded. */
+body.ee-jinx .jinx-tag,
+body.ee-jinx .jinx-mark{
+  display:none!important;
+}
+
+/* Reduce background noise so the artwork has room to breathe. */
+body.ee-jinx .section{
+  background-image:
+    radial-gradient(circle at 5% 18%,rgba(255,59,189,.028) 0 2.4%,transparent 3%),
+    radial-gradient(circle at 95% 76%,rgba(47,214,255,.026) 0 2.6%,transparent 3.2%)!important;
+}
+body.ee-jinx .section:after{
+  opacity:.42!important;
+  filter:blur(1px) drop-shadow(0 0 12px rgba(255,59,189,.08))!important;
+}
+
+/* Keep section graffiti as stickers on the edges, not giant overlays. */
+body.ee-jinx .jinx-crowned-eye{
+  width:clamp(105px,13vw,185px)!important;
+  right:-1%!important;
+  bottom:4%!important;
+  opacity:.8!important;
+}
+body.ee-jinx .jinx-crown{
+  width:clamp(72px,8vw,115px)!important;
+  left:1%!important;
+  top:8%!important;
+  opacity:.72!important;
+}
+body.ee-jinx .jinx-boom{
+  width:clamp(110px,14vw,195px)!important;
+  right:-1%!important;
+  top:9%!important;
+  opacity:.86!important;
+}
+body.ee-jinx .jinx-burst{
+  width:clamp(78px,9vw,125px)!important;
+  left:1%!important;
+  bottom:5%!important;
+  opacity:.66!important;
+}
+body.ee-jinx .jinx-eye-crown{
+  width:clamp(110px,13vw,185px)!important;
+  right:-1%!important;
+  bottom:4%!important;
+  opacity:.78!important;
+}
+body.ee-jinx .jinx-ah-stack{
+  width:clamp(66px,7vw,100px)!important;
+  left:1%!important;
+  top:9%!important;
+  opacity:.7!important;
+}
+body.ee-jinx .jinx-bomb{
+  width:clamp(115px,14vw,195px)!important;
+  right:-1%!important;
+  bottom:3%!important;
+  opacity:.82!important;
+}
+body.ee-jinx .jinx-ha-cascade{
+  width:clamp(80px,9vw,125px)!important;
+  right:1%!important;
+  top:9%!important;
+  opacity:.7!important;
+}
+
+/* Give every image sticker the same crisp neon-cutout treatment. */
+body.ee-jinx .jinx-art{
+  filter:
+    drop-shadow(5px 6px 0 rgba(8,3,12,.72))
+    drop-shadow(0 0 11px rgba(255,59,189,.12))!important;
+}
+body.ee-jinx .section:hover .jinx-art{
+  filter:
+    drop-shadow(6px 7px 0 rgba(8,3,12,.76))
+    drop-shadow(0 0 14px rgba(47,214,255,.16))!important;
+}
+
+/* Keep the character on achievements prominent but not oversized. */
+body.ee-jinx .jinx-achievement-girl{
+  z-index:11!important;
+  width:42%!important;
+  right:2%!important;
+  opacity:.9!important;
+}
+body.ee-jinx .jinx-achievement-girl img{
+  height:90%!important;
+  filter:
+    drop-shadow(7px 8px 0 rgba(8,3,12,.7))
+    drop-shadow(0 0 16px rgba(255,59,189,.14))!important;
+}
+
+@media(max-width:760px){
+  body.ee-jinx .jinx-crowned-eye,
+  body.ee-jinx .jinx-boom,
+  body.ee-jinx .jinx-eye-crown,
+  body.ee-jinx .jinx-bomb{
+    width:105px!important;
+    opacity:.5!important;
+  }
+  body.ee-jinx .jinx-crown,
+  body.ee-jinx .jinx-burst,
+  body.ee-jinx .jinx-ah-stack,
+  body.ee-jinx .jinx-ha-cascade{
+    width:66px!important;
+    opacity:.44!important;
+  }
+  body.ee-jinx .jinx-achievement-girl{
+    width:135px!important;
+    opacity:.45!important;
+  }
+}
+
 </style>
 </head>
 <body>
