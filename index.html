@@ -828,6 +828,87 @@ body.ee-kuromi .kuromi-hero-art{
   .kuromi-hero-art{width:105px;right:2%;bottom:1%;opacity:.5}
 }
 
+
+/* ===== KUROMI HEART FIELD v5 ===== */
+.kuromi-heart-cloud{display:none;position:absolute;inset:0;z-index:6;pointer-events:none;overflow:hidden}
+body.ee-kuromi .kuromi-heart-cloud{display:block}
+.kuromi-heart-cloud .kuromi-heart-img{
+  display:block!important;
+  position:absolute;
+  height:auto;
+  opacity:.95;
+  filter:drop-shadow(4px 4px 0 rgba(33,10,39,.68));
+  animation:kuromiHeartFloat 2.1s steps(2,end) infinite alternate;
+}
+.kuromi-heart-cloud .h1{width:44px}.kuromi-heart-cloud .h2{width:34px}.kuromi-heart-cloud .h3{width:52px}.kuromi-heart-cloud .h4{width:38px}
+.kuromi-heart-cloud .h2{animation-delay:.22s}.kuromi-heart-cloud .h3{animation-delay:.44s}.kuromi-heart-cloud .h4{animation-delay:.66s}
+
+/* hero */
+.heart-cloud-home .h1{left:3%;top:17%;transform:rotate(-8deg)}
+.heart-cloud-home .h2{left:35%;top:8%;transform:rotate(8deg)}
+.heart-cloud-home .h3{right:4%;top:20%;transform:rotate(-4deg)}
+.heart-cloud-home .h4{right:30%;bottom:7%;transform:rotate(7deg)}
+
+/* profile */
+.heart-cloud-profile .h1{left:4%;top:13%}
+.heart-cloud-profile .h2{right:6%;top:22%}
+.heart-cloud-profile .h3{right:18%;bottom:8%;transform:rotate(6deg)}
+
+/* projects */
+.heart-cloud-missions .h1{left:2%;top:12%}
+.heart-cloud-missions .h2{left:48%;top:5%;transform:rotate(9deg)}
+.heart-cloud-missions .h3{right:3%;top:28%;transform:rotate(-5deg)}
+.heart-cloud-missions .h4{right:24%;bottom:5%;transform:rotate(8deg)}
+
+/* experience */
+.heart-cloud-experience .h1{left:5%;top:20%;transform:rotate(-7deg)}
+.heart-cloud-experience .h2{right:5%;top:11%}
+.heart-cloud-experience .h3{left:43%;bottom:7%;transform:rotate(5deg)}
+
+/* achievements */
+.heart-cloud-wins .h1{left:3%;top:9%}
+.heart-cloud-wins .h2{right:4%;top:16%;transform:rotate(7deg)}
+.heart-cloud-wins .h3{right:24%;bottom:6%;transform:rotate(-6deg)}
+
+/* skills */
+.heart-cloud-skills .h1{left:3%;top:12%}
+.heart-cloud-skills .h2{right:3%;top:20%;transform:rotate(-8deg)}
+.heart-cloud-skills .h3{left:48%;bottom:5%;transform:rotate(6deg)}
+.heart-cloud-skills .h4{right:24%;bottom:10%;transform:rotate(-4deg)}
+
+/* contact */
+.heart-cloud-contact .h1{left:3%;top:14%}
+.heart-cloud-contact .h2{right:5%;top:9%;transform:rotate(7deg)}
+.heart-cloud-contact .h3{left:24%;bottom:6%;transform:rotate(-5deg)}
+.heart-cloud-contact .h4{right:24%;bottom:8%;transform:rotate(6deg)}
+
+@keyframes kuromiHeartFloat{
+  from{translate:0 0;scale:1}
+  to{translate:0 -8px;scale:1.04}
+}
+
+body.ee-kuromi .mission:hover:before,
+body.ee-kuromi .badge-card:hover:before,
+body.ee-kuromi .inventory-box:hover:before{
+  content:"♥";
+  position:absolute;
+  left:10px;
+  bottom:8px;
+  z-index:4;
+  font:18px var(--pixel);
+  color:#ff70b8;
+  text-shadow:2px 2px 0 #8754d6;
+  animation:kuromiPopHeart .55s steps(2,end) both;
+}
+@keyframes kuromiPopHeart{
+  from{transform:scale(.3) rotate(-12deg);opacity:0}
+  to{transform:scale(1) rotate(4deg);opacity:1}
+}
+@media(max-width:760px){
+  .kuromi-heart-cloud .h3,.kuromi-heart-cloud .h4{display:none!important}
+  .kuromi-heart-cloud .h1{width:30px}.kuromi-heart-cloud .h2{width:25px}
+}
+
 </style>
 </head>
 <body>
@@ -948,6 +1029,12 @@ body.ee-kuromi .kuromi-hero-art{
   <main>
     <!-- HERO -->
     <section class="hero section" id="home" data-stage="SPAWN">
+      <div class="kuromi-heart-cloud heart-cloud-home" aria-hidden="true">
+        <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
+        <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-lilac h3" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-goth h4" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="">
+      </div>
       <div class="hero-graffiti scribble-a" aria-hidden="true">404 FEAR<br/>NOT FOUND</div>
       <div class="hero-graffiti scribble-b" aria-hidden="true">★ PWN THE BORING ★</div>
       <div class="hero-graffiti scribble-c" aria-hidden="true">[ ! ]</div>
@@ -1060,6 +1147,12 @@ body.ee-kuromi .kuromi-hero-art{
 
     <!-- PROJECTS -->
     <section class="section section-pad" id="missions" data-stage="MISSION SELECT">
+      <div class="kuromi-heart-cloud heart-cloud-missions" aria-hidden="true">
+        <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
+        <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-lilac h3" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-goth h4" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="">
+      </div>
       <img class="kuromi-heart-img kh1" src="assets/kuromi/retro_pixel_heart_icon.png" alt="" aria-hidden="true">
       <img class="kuromi-heart-img kh2" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="" aria-hidden="true">
       <div class="kuromi-real-art kuromi-witch-art"><img src="assets/kuromi/kawaii_gothic_witch_on_a_broom.png" alt="Kuromi-inspired gothic witch riding a broom"><span class="kuromi-art-label">WITCH MODE ★</span></div>
@@ -1141,6 +1234,11 @@ body.ee-kuromi .kuromi-hero-art{
 
     <!-- EXPERIENCE -->
     <section class="section section-pad" id="experience" data-stage="CAMPAIGN">
+      <div class="kuromi-heart-cloud heart-cloud-experience" aria-hidden="true">
+        <img class="kuromi-heart-img h-goth h1" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="">
+        <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-lilac h3" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="">
+      </div>
       <img class="kuromi-heart-img kh-exp" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="" aria-hidden="true">
       <span class="pixel-heart-sprite alt kh1"></span>
       <div class="section-title reveal">
@@ -1184,6 +1282,11 @@ body.ee-kuromi .kuromi-hero-art{
 
     <!-- ACHIEVEMENTS / CTF -->
     <section class="section section-pad" id="wins" data-stage="UNLOCKS">
+      <div class="kuromi-heart-cloud heart-cloud-wins" aria-hidden="true">
+        <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
+        <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-goth h3" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="">
+      </div>
       <img class="kuromi-heart-img kh1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="" aria-hidden="true">
       <div class="kuromi-real-art kuromi-gamer-art"><img src="assets/kuromi/goth_kawaii_gamer_character_sticker.png" alt="Kuromi-inspired gothic gamer holding a controller"><span class="kuromi-art-label">PLAYER 02 ♡</span></div>
       <div class="section-title reveal">
@@ -1252,6 +1355,12 @@ body.ee-kuromi .kuromi-hero-art{
 
     <!-- SKILLS -->
     <section class="section section-pad" id="skills" data-stage="INVENTORY">
+      <div class="kuromi-heart-cloud heart-cloud-skills" aria-hidden="true">
+        <img class="kuromi-heart-img h-lilac h1" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-pink h2" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-red h3" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
+        <img class="kuromi-heart-img h-goth h4" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="">
+      </div>
       <img class="kuromi-heart-img kh1" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="" aria-hidden="true">
       <div class="kuromi-real-art kuromi-punk-art"><img src="assets/kuromi/kawaii_gothic_bunny_sticker_with_pixel_hearts.png" alt="Kuromi-inspired gothic character with pixel hearts"><span class="kuromi-art-label">CUTE MENACE ♡</span></div>
       <div class="section-title reveal">
@@ -1313,6 +1422,12 @@ body.ee-kuromi .kuromi-hero-art{
 
     <!-- CONTACT -->
     <section class="section section-pad final-stage" id="contact" data-stage="CONNECT">
+      <div class="kuromi-heart-cloud heart-cloud-contact" aria-hidden="true">
+        <img class="kuromi-heart-img h-pink h1" src="assets/kuromi/retro_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-lilac h2" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="">
+        <img class="kuromi-heart-img h-goth h3" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="">
+        <img class="kuromi-heart-img h-red h4" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
+      </div>
       <img class="kuromi-heart-img kh1" src="assets/kuromi/retro_pixel_heart_icon.png" alt="" aria-hidden="true">
       <img class="kuromi-heart-img kh2" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="" aria-hidden="true">
       <div class="final-panel reveal">
