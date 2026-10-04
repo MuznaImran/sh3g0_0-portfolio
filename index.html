@@ -1689,6 +1689,90 @@ body.ee-jinx .console-window code{
   body.ee-jinx .console-window:after{display:none}
 }
 
+
+/* ===== JINX FOREGROUND GRAFFITI v9 ===== */
+/* User-directed cleanup: graffiti stays in front; remove the colorful hero accents. */
+body.ee-jinx .hero:before,
+body.ee-jinx .hero:after{
+  content:none!important;
+  display:none!important;
+}
+
+/* Bring Jinx graffiti above the UI again. */
+body.ee-jinx .jinx-deco{
+  z-index:14!important;
+}
+body.ee-jinx .jinx-art{
+  z-index:15!important;
+}
+body.ee-jinx .jinx-tag,
+body.ee-jinx .jinx-mark{
+  z-index:16!important;
+}
+
+/* Keep the foreground pieces toward the edges so the content remains readable. */
+body.ee-jinx .jinx-chaos-wordmark{
+  left:-2.5%!important;
+  bottom:-1%!important;
+  width:clamp(145px,16vw,235px)!important;
+  opacity:.9!important;
+}
+body.ee-jinx .jinx-shark{
+  right:-1.2%!important;
+  top:8%!important;
+  width:clamp(105px,12vw,180px)!important;
+  opacity:.96!important;
+}
+body.ee-jinx .jinx-home .jt1{
+  left:2%!important;
+  top:12%!important;
+  font-size:clamp(24px,3.3vw,48px)!important;
+  opacity:.94!important;
+}
+body.ee-jinx .jinx-home .jt2{
+  right:2%!important;
+  top:31%!important;
+  font-size:clamp(24px,3vw,44px)!important;
+  opacity:.7!important;
+}
+
+/* Other sections: foreground graffiti, anchored at section edges rather than card centers. */
+body.ee-jinx .jinx-crowned-eye{right:-1.5%!important;bottom:2%!important}
+body.ee-jinx .jinx-crown{left:-1%!important;top:7%!important}
+body.ee-jinx .jinx-boom{right:-1.5%!important;top:8%!important}
+body.ee-jinx .jinx-burst{left:-1.5%!important;bottom:2%!important}
+body.ee-jinx .jinx-eye-crown{right:-1.5%!important;bottom:3%!important}
+body.ee-jinx .jinx-ah-stack{left:-.5%!important;top:8%!important}
+body.ee-jinx .jinx-bomb{right:-1.5%!important;bottom:1%!important}
+body.ee-jinx .jinx-ha-cascade{right:-1%!important;top:7%!important}
+
+/* Do not let card stacking override the graffiti layer. */
+body.ee-jinx .achievement-cards,
+body.ee-jinx .evidence-cache,
+body.ee-jinx .inventory,
+body.ee-jinx .campaign,
+body.ee-jinx .mission-grid,
+body.ee-jinx .section-title{
+  z-index:8!important;
+}
+
+@media(max-width:760px){
+  body.ee-jinx .jinx-deco{z-index:12!important}
+  body.ee-jinx .jinx-art{z-index:13!important}
+  body.ee-jinx .jinx-chaos-wordmark{
+    left:-34px!important;
+    bottom:0!important;
+    width:110px!important;
+    opacity:.58!important;
+  }
+  body.ee-jinx .jinx-shark{
+    right:-24px!important;
+    top:10%!important;
+    width:86px!important;
+    opacity:.62!important;
+  }
+}
+
 </style>
 </head>
 <body>
