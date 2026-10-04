@@ -1598,6 +1598,97 @@ body.ee-jinx .hero:hover .jinx-shark{opacity:1}
   }
 }
 
+
+/* ===== JINX CONSOLE SKIN v8 ===== */
+body.ee-jinx #consoleButton:before{content:none!important}
+
+body.ee-jinx .console-modal{
+  background:
+    radial-gradient(circle at 18% 20%,rgba(255,59,189,.13),transparent 25%),
+    radial-gradient(circle at 82% 72%,rgba(47,214,255,.11),transparent 28%),
+    rgba(4,1,8,.88)!important;
+}
+body.ee-jinx .console-window{
+  position:relative;
+  overflow:hidden;
+  border-color:var(--jinx-pink)!important;
+  background:#08050d!important;
+  box-shadow:
+    8px 8px 0 var(--jinx-blue),
+    14px 14px 0 var(--jinx-purple)!important;
+}
+body.ee-jinx .console-window:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 5px,
+      rgba(255,255,255,.012) 6px
+    );
+}
+body.ee-jinx .console-window:after{
+  content:"CHAOS TERMINAL // CHANNEL 0XJ";
+  position:absolute;
+  z-index:5;
+  right:58px;
+  top:14px;
+  color:var(--jinx-blue);
+  font:8px var(--pixel);
+  letter-spacing:.08em;
+  text-shadow:0 0 10px rgba(47,214,255,.45);
+}
+body.ee-jinx .console-head,
+body.ee-jinx .console-output,
+body.ee-jinx .console-form{
+  position:relative;
+  z-index:2;
+}
+body.ee-jinx .console-head{
+  background:
+    linear-gradient(90deg,rgba(255,59,189,.20),rgba(135,80,255,.10) 55%,rgba(47,214,255,.12))!important;
+  color:var(--jinx-pink)!important;
+  border-bottom:2px solid var(--jinx-blue)!important;
+}
+body.ee-jinx .console-head button{
+  color:var(--jinx-pink)!important;
+  text-shadow:0 0 10px rgba(255,59,189,.5);
+}
+body.ee-jinx .console-output{
+  color:#e7dff0!important;
+  background:
+    radial-gradient(circle at 80% 30%,rgba(47,214,255,.035),transparent 28%),
+    radial-gradient(circle at 15% 85%,rgba(255,59,189,.045),transparent 30%)!important;
+}
+body.ee-jinx .console-output .prompt,
+body.ee-jinx .console-form label{
+  color:var(--jinx-blue)!important;
+}
+body.ee-jinx .console-output .pink{color:var(--jinx-pink)!important}
+body.ee-jinx .console-output .blue{color:var(--jinx-blue)!important}
+body.ee-jinx .console-output .red{color:var(--jinx-red)!important}
+body.ee-jinx .console-output .dim{color:#9c84a9!important}
+body.ee-jinx .console-form{
+  border-top:2px solid rgba(255,59,189,.45)!important;
+  background:rgba(20,7,29,.72);
+}
+body.ee-jinx .console-form input{
+  color:#fff7ff!important;
+  caret-color:var(--jinx-pink);
+}
+body.ee-jinx .console-form input::placeholder{color:#745f80}
+body.ee-jinx .console-window code{
+  color:var(--jinx-green);
+  text-shadow:0 0 8px rgba(155,255,84,.3);
+}
+
+@media(max-width:760px){
+  body.ee-jinx .console-window:after{display:none}
+}
+
 </style>
 </head>
 <body>
