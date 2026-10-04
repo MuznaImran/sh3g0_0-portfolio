@@ -1759,11 +1759,10 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
     toast((name||"DEFAULT").toUpperCase()+" MODE // LOADED");
   }
   function rootUnlock(){
-    localStorage.setItem("sh3g0_root","1"); document.body.classList.add("ee-root");
+    document.body.classList.add("ee-root");
     access("FLAG VERIFIED // ROOT ACCESS UNLOCKED",1900); toast("ROOT MODE // UNLOCKED");
     for(let i=0;i<28;i++)setTimeout(()=>{const s=document.createElement("span");s.className="ee-root-spark";s.textContent=Math.random()>.5?"✦":"★";s.style.left=Math.random()*100+"vw";s.style.top=(60+Math.random()*35)+"vh";s.style.fontSize=(10+Math.random()*18)+"px";document.body.appendChild(s);setTimeout(()=>s.remove(),1900)},i*45);
   }
-  if(localStorage.getItem("sh3g0_root")==="1")document.body.classList.add("ee-root");
 
   // Intercept special console commands before the original handler.
   q("#consoleForm")?.addEventListener("submit",e=>{
@@ -1815,28 +1814,6 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
 })();
 </script>
 
-
-<script>
-(() => {
-  const form=document.getElementById("consoleForm");
-  const input=document.getElementById("consoleInput");
-  const output=document.getElementById("consoleOutput");
-  if(!form||!input||!output||window.__SH3G0_ROOT_RESET)return;
-  window.__SH3G0_ROOT_RESET=true;
-  form.addEventListener("submit",e=>{
-    const key=input.value.trim().toLowerCase();
-    if(key!=="lock")return;
-    e.preventDefault();e.stopImmediatePropagation();
-    localStorage.removeItem("sh3g0_root");
-    localStorage.removeItem("sh3g0_root_unlocked");
-    document.body.classList.remove("ee-root","root-mode");
-    const p=document.createElement("p");
-    p.innerHTML='<span class="green">root persistence cleared.</span> access badge removed.';
-    output.appendChild(p);output.scrollTop=output.scrollHeight;
-    input.value="";
-  },true);
-})();
-</script>
 
 </body>
 </html>
