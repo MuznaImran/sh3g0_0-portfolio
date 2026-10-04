@@ -2020,6 +2020,60 @@ body.ee-jinx .jinx-achievement-girl img{
   }
 }
 
+
+/* ===== JINX HERO VISIBILITY v12 ===== */
+body.ee-jinx .jinx-home{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  z-index:20!important;
+}
+body.ee-jinx .jinx-home .jinx-art{
+  display:block!important;
+  visibility:visible!important;
+}
+
+/* Two restrained foreground stickers only. */
+body.ee-jinx .jinx-home .jinx-shark{
+  width:185px!important;
+  right:4%!important;
+  top:10%!important;
+  bottom:auto!important;
+  left:auto!important;
+  opacity:.95!important;
+  z-index:22!important;
+  transform:rotate(8deg)!important;
+  animation:none!important;
+}
+body.ee-jinx .jinx-home .jinx-hero-bomb{
+  width:118px!important;
+  right:2.8%!important;
+  bottom:5%!important;
+  top:auto!important;
+  left:auto!important;
+  opacity:.88!important;
+  z-index:22!important;
+  transform:rotate(-9deg)!important;
+  animation:none!important;
+}
+
+@media(max-width:1100px){
+  body.ee-jinx .jinx-home .jinx-shark{width:145px!important;right:2%!important}
+  body.ee-jinx .jinx-home .jinx-hero-bomb{width:92px!important;right:1%!important}
+}
+@media(max-width:760px){
+  body.ee-jinx .jinx-home .jinx-shark{
+    width:88px!important;
+    right:-10px!important;
+    opacity:.7!important;
+  }
+  body.ee-jinx .jinx-home .jinx-hero-bomb{
+    width:62px!important;
+    right:-7px!important;
+    opacity:.58!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2141,8 +2195,8 @@ body.ee-jinx .jinx-achievement-girl img{
     <!-- HERO -->
     <section class="hero section" id="home" data-stage="SPAWN">
       <div class="jinx-deco jinx-home" aria-hidden="true">
-        <img class="jinx-art jinx-shark" src="assets/jinx/neon_graffiti_shark_head.png" alt="" loading="lazy">
-        <img class="jinx-art jinx-hero-bomb" src="assets/jinx/neon_graffiti_punk_bomb_sticker.png" alt="" loading="lazy">
+        <img class="jinx-art jinx-shark" src="assets/jinx/neon_graffiti_shark_head.png" alt="" loading="eager">
+        <img class="jinx-art jinx-hero-bomb" src="assets/jinx/neon_graffiti_punk_bomb_sticker.png" alt="" loading="eager">
       </div>
       <div class="kuromi-heart-cloud heart-cloud-home" aria-hidden="true">
         <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
