@@ -422,12 +422,6 @@ body.ee-kuromi #missions:before{content:"★ cute but dangerous ★";left:2vw;to
 body.ee-kuromi #experience:after{content:"♡ menace mode ♡";right:2vw;bottom:10%;position:absolute;font:clamp(18px,2.7vw,32px) var(--scribble);color:#be80ff;text-shadow:3px 3px 0 #120317;transform:rotate(5deg)}
 body.ee-kuromi #wins:before{content:"🎀";left:3vw;top:22%;position:absolute;font-size:58px;filter:drop-shadow(3px 3px 0 #120317)}
 body.ee-kuromi #skills:after{content:"♡ ♡ ♡";right:4vw;top:28%;position:absolute;font:34px var(--pixel);color:#ff84d8;text-shadow:2px 2px 0 #120317;letter-spacing:12px}
-.ee-kuromi:before{content:"♡  ★  ♡  ✦  ♡  ★  ♡";position:absolute;left:-8%;right:-8%;top:8%;font:clamp(18px,3vw,34px) var(--pixel);letter-spacing:5vw;color:rgba(255,132,216,.36);animation:eeDrift 12s linear infinite}
-.ee-cute{position:absolute;right:5vw;bottom:7vh;width:min(280px,38vw);aspect-ratio:1;border:4px solid #120317;border-radius:48% 48% 44% 44%;background:linear-gradient(145deg,#2a1136 0 58%,#ff84d8 59% 100%);box-shadow:10px 10px 0 #be80ff,16px 16px 0 rgba(52,201,255,.35);transform:rotate(4deg);display:grid;place-items:center}
-.ee-cute:before,.ee-cute:after{content:"";position:absolute;top:-20%;width:34%;height:55%;background:#2a1136;border:4px solid #120317;z-index:-1}
-.ee-cute:before{left:8%;clip-path:polygon(50% 0,100% 100%,0 100%);transform:rotate(-12deg)}.ee-cute:after{right:8%;clip-path:polygon(50% 0,100% 100%,0 100%);transform:rotate(12deg)}
-.ee-cute .face{font-size:clamp(64px,10vw,130px);filter:drop-shadow(4px 4px 0 #120317)}.ee-cute .bow{position:absolute;top:7%;right:7%;font-size:clamp(34px,5vw,68px)}
-.ee-caption{position:absolute;right:7vw;bottom:3vh;font:clamp(18px,3vw,36px) var(--scribble);color:#ff84d8;text-shadow:3px 3px 0 #120317;transform:rotate(-5deg)}
 
 /* SHEGO: green toxic pop splashes embedded throughout */
 body.ee-shego{background:radial-gradient(circle at 80% 20%,rgba(140,255,90,.15),transparent 24%),radial-gradient(circle at 18% 75%,rgba(140,255,90,.11),transparent 28%),linear-gradient(180deg,#050907,#0b1410 50%,#08040d)!important}
@@ -800,6 +794,40 @@ body.ee-kuromi #skills{padding-left:min(10vw,140px)}
   body.ee-kuromi .kuromi-heart-img{width:32px!important;opacity:.8}
 }
 
+
+/* Kuromi hero decoration: section-local, not viewport-fixed */
+.kuromi-hero-art{
+  display:none;
+  position:absolute;
+  right:3.5%;
+  bottom:5%;
+  z-index:4;
+  width:clamp(135px,17vw,245px);
+  pointer-events:none;
+  transform:rotate(3deg);
+}
+body.ee-kuromi .kuromi-hero-art{
+  display:block;
+  animation:kuromiHeroFloat 2.2s steps(2,end) infinite alternate;
+}
+.kuromi-hero-art img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(8px 10px 0 rgba(25,8,31,.65)) drop-shadow(0 0 14px rgba(255,112,184,.18));
+}
+@keyframes kuromiHeroFloat{
+  from{transform:translateY(0) rotate(2deg)}
+  to{transform:translateY(-7px) rotate(4deg)}
+}
+@media(max-width:920px){
+  .kuromi-hero-art{right:1%;bottom:2%;width:135px;opacity:.78}
+}
+@media(max-width:650px){
+  .kuromi-hero-art{width:105px;right:2%;bottom:1%;opacity:.5}
+}
+
 </style>
 </head>
 <body>
@@ -923,6 +951,10 @@ body.ee-kuromi #skills{padding-left:min(10vw,140px)}
       <div class="hero-graffiti scribble-a" aria-hidden="true">404 FEAR<br/>NOT FOUND</div>
       <div class="hero-graffiti scribble-b" aria-hidden="true">★ PWN THE BORING ★</div>
       <div class="hero-graffiti scribble-c" aria-hidden="true">[ ! ]</div>
+
+      <div class="kuromi-hero-art" aria-hidden="true">
+        <img src="assets/kuromi/goth_kawaii_gamer_character_sticker.png" alt="">
+      </div>
 
       <div class="hero-copy reveal">
         <p class="kicker">PLAYER 01 // CYBERSECURITY</p>
@@ -1318,7 +1350,6 @@ body.ee-kuromi #skills{padding-left:min(10vw,140px)}
 
 
   <div class="ee-layer ee-jinx"><div class="ee-graf a">PURE<br>CHAOS!</div><div class="ee-graf b">ERRORS ARE<br>DECORATION</div><div class="ee-graf c">★ BOOM // GLITCH // RUN ★</div><span class="ee-x x1">✕</span><span class="ee-x x2">✕</span><span class="ee-x x3">✕</span></div>
-  <div class="ee-layer ee-kuromi"><div class="ee-cute"><span class="face">☠</span><span class="bow">🎀</span></div><div class="ee-caption">KUROMI MODE ♡<br>CUTE MENACE ENABLED</div></div>
   <div class="ee-layer ee-shego"><span class="ee-flame f1"></span><span class="ee-flame f2"></span><span class="ee-flame f3"></span><div class="ee-shego-tag">ACID GREEN<br>ONLINE</div></div>
   <div class="ee-access" id="eeAccess"><div class="ee-access-card"><small>SH3G0_OS // PRIVILEGE ESCALATION</small><h2>ACCESS GRANTED</h2><p id="eeAccessMsg">hidden route discovered</p></div></div>
   <div class="ee-game" id="eeGame"><div class="ee-game-window"><div class="ee-game-head"><span>SECRET LEVEL // PACKET PANIC</span><button id="eeGameClose">×</button></div><div class="ee-game-hud"><span>GOOD PACKETS: <b id="eeScore">0</b>/12</span><span>INTEGRITY: <b id="eeLives">3</b></span><span>STATUS: <b id="eeStatus">READY</b></span></div><canvas id="eePacketGame" width="860" height="440"></canvas><div class="ee-game-help">MOVE: ← → or A / D // COLLECT GREEN PACKETS // AVOID RED MALWARE // GET 12 TO CAPTURE THE FLAG</div><div class="ee-game-result" id="eeResult"></div></div></div>
