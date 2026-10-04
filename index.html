@@ -722,6 +722,84 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
   body.ee-kuromi #missions,body.ee-kuromi #skills{padding-left:0;padding-right:0}
 }
 
+
+/* ===== KUROMI MODE v4: local generated art + real pixel-heart PNG assets ===== */
+body.ee-kuromi .pixel-heart-sprite{display:none!important}
+.ee-layer.ee-kuromi{display:none!important}
+
+.kuromi-heart-img{
+  display:none;
+  position:absolute;
+  z-index:6;
+  width:clamp(30px,4vw,54px);
+  height:auto;
+  pointer-events:none;
+  image-rendering:pixelated;
+  filter:drop-shadow(4px 4px 0 rgba(42,19,48,.72));
+}
+body.ee-kuromi .kuromi-heart-img{display:block;animation:kuromiPngHeartBob 1.8s steps(2,end) infinite alternate}
+body.ee-kuromi #profile .kh1{left:2.5%;top:17%;width:46px}
+body.ee-kuromi #profile .kh2{right:4%;bottom:11%;width:38px;animation-delay:.2s}
+body.ee-kuromi #missions .kh1{left:2%;bottom:10%;width:42px}
+body.ee-kuromi #missions .kh2{right:4%;top:8%;width:48px;animation-delay:.25s}
+body.ee-kuromi #experience .kh-exp{right:4%;top:16%;width:40px}
+body.ee-kuromi #wins .kh1{left:3%;top:15%;width:46px}
+body.ee-kuromi #skills .kh1{right:3%;top:15%;width:44px}
+body.ee-kuromi #contact .kh1{left:3%;top:12%;width:40px}
+body.ee-kuromi #contact .kh2{right:3%;bottom:11%;width:48px;animation-delay:.28s}
+
+body.ee-kuromi .kuromi-real-art{
+  display:block!important;
+  z-index:8;
+  pointer-events:none;
+}
+body.ee-kuromi .kuromi-real-art img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(8px 10px 0 rgba(25,8,31,.66)) drop-shadow(0 0 16px rgba(255,112,184,.18));
+}
+body.ee-kuromi .kuromi-witch-art{
+  right:-1vw;
+  top:9%;
+  width:clamp(170px,22vw,320px);
+  transform:rotate(4deg);
+}
+body.ee-kuromi .kuromi-gamer-art{
+  right:-.5vw;
+  bottom:5%;
+  width:clamp(165px,20vw,290px);
+  transform:rotate(3deg);
+}
+body.ee-kuromi .kuromi-punk-art{
+  left:-1vw;
+  bottom:4%;
+  width:clamp(165px,20vw,290px);
+  transform:rotate(-4deg);
+}
+body.ee-kuromi .kuromi-art-label{
+  background:#ff70b8!important;
+  color:#1b0b20!important;
+  border-color:#1b0b20!important;
+  box-shadow:3px 3px 0 #8754d6!important;
+}
+body.ee-kuromi .kuromi-gamer-art .kuromi-art-label{left:-6px;bottom:8px;transform:rotate(-5deg)}
+body.ee-kuromi #missions{padding-right:min(12vw,160px)}
+body.ee-kuromi #wins{padding-right:min(10vw,140px)}
+body.ee-kuromi #skills{padding-left:min(10vw,140px)}
+
+@keyframes kuromiPngHeartBob{
+  from{transform:translateY(0) rotate(-2deg)}
+  to{transform:translateY(-8px) rotate(2deg)}
+}
+@media(max-width:780px){
+  body.ee-kuromi .kuromi-real-art{opacity:.42!important;width:130px!important}
+  body.ee-kuromi #missions,
+  body.ee-kuromi #wins,
+  body.ee-kuromi #skills{padding-left:0;padding-right:0}
+  body.ee-kuromi .kuromi-heart-img{width:32px!important;opacity:.8}
+}
+
 </style>
 </head>
 <body>
@@ -895,7 +973,7 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
 
     <!-- PROFILE -->
     <section class="section section-pad" id="profile" data-stage="PLAYER CARD">
-      <span class="pixel-heart-sprite kh1"></span><span class="pixel-heart-sprite alt kh2"></span>
+      <img class="kuromi-heart-img kh1" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="" aria-hidden="true"><span class="pixel-heart-sprite alt kh2"></span>
       <div class="section-title reveal">
         <span class="level-no">STAGE 01</span>
         <h2>PLAYER CARD</h2>
@@ -950,7 +1028,9 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
 
     <!-- PROJECTS -->
     <section class="section section-pad" id="missions" data-stage="MISSION SELECT">
-      <span class="pixel-heart-sprite kh1"></span><span class="pixel-heart-sprite alt kh2"></span><div class="kuromi-real-art kuromi-witch-art"><img src="https://w7.pngwing.com/pngs/365/52/png-transparent-kuromi-cartoon.png" alt="Kuromi in a purple witch costume" onerror="this.src='https://www.pngall.com/wp-content/uploads/13/Kuromi-PNG-Background.png'"><span class="kuromi-art-label">WITCH MODE ★</span></div>
+      <img class="kuromi-heart-img kh1" src="assets/kuromi/retro_pixel_heart_icon.png" alt="" aria-hidden="true">
+      <img class="kuromi-heart-img kh2" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="" aria-hidden="true">
+      <div class="kuromi-real-art kuromi-witch-art"><img src="assets/kuromi/kawaii_gothic_witch_on_a_broom.png" alt="Kuromi-inspired gothic witch riding a broom"><span class="kuromi-art-label">WITCH MODE ★</span></div>
       <div class="section-title reveal">
         <span class="level-no">STAGE 02</span>
         <h2>MISSION SELECT</h2>
@@ -1029,6 +1109,7 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
 
     <!-- EXPERIENCE -->
     <section class="section section-pad" id="experience" data-stage="CAMPAIGN">
+      <img class="kuromi-heart-img kh-exp" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="" aria-hidden="true">
       <span class="pixel-heart-sprite alt kh1"></span>
       <div class="section-title reveal">
         <span class="level-no">STAGE 03</span>
@@ -1071,7 +1152,8 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
 
     <!-- ACHIEVEMENTS / CTF -->
     <section class="section section-pad" id="wins" data-stage="UNLOCKS">
-      <span class="pixel-heart-sprite kh1"></span>
+      <img class="kuromi-heart-img kh1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="" aria-hidden="true">
+      <div class="kuromi-real-art kuromi-gamer-art"><img src="assets/kuromi/goth_kawaii_gamer_character_sticker.png" alt="Kuromi-inspired gothic gamer holding a controller"><span class="kuromi-art-label">PLAYER 02 ♡</span></div>
       <div class="section-title reveal">
         <span class="level-no">STAGE 04</span>
         <h2>UNLOCKED!</h2>
@@ -1138,7 +1220,8 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
 
     <!-- SKILLS -->
     <section class="section section-pad" id="skills" data-stage="INVENTORY">
-      <span class="pixel-heart-sprite alt kh1"></span><div class="kuromi-real-art kuromi-punk-art"><img src="https://e7.pngegg.com/pngimages/667/627/png-clipart-hello-kitty-my-melody-sanrio-kuromi-banner-hello-kitty-mammal-carnivoran.png" alt="Kuromi sitting on bright pink skulls"><span class="kuromi-art-label">CUTE MENACE ♡</span></div>
+      <img class="kuromi-heart-img kh1" src="assets/kuromi/pastel_pixel_heart_icon.png" alt="" aria-hidden="true">
+      <div class="kuromi-real-art kuromi-punk-art"><img src="assets/kuromi/kawaii_gothic_bunny_sticker_with_pixel_hearts.png" alt="Kuromi-inspired gothic character with pixel hearts"><span class="kuromi-art-label">CUTE MENACE ♡</span></div>
       <div class="section-title reveal">
         <span class="level-no">STAGE 05</span>
         <h2>INVENTORY</h2>
@@ -1198,7 +1281,8 @@ body.ee-kuromi #skills{padding-left:min(7vw,95px)}
 
     <!-- CONTACT -->
     <section class="section section-pad final-stage" id="contact" data-stage="CONNECT">
-      <span class="pixel-heart-sprite kh1"></span>
+      <img class="kuromi-heart-img kh1" src="assets/kuromi/retro_pixel_heart_icon.png" alt="" aria-hidden="true">
+      <img class="kuromi-heart-img kh2" src="assets/kuromi/neon_pixel_heart_with_gothic_border.png" alt="" aria-hidden="true">
       <div class="final-panel reveal">
         <span class="scribble top-scribble">NEW QUEST?</span>
         <p class="kicker">STAGE 06 // CONNECT</p>
