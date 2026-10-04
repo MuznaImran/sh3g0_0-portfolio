@@ -1437,6 +1437,51 @@ body.ee-jinx .arcade-buttons i:last-child{
   body.ee-jinx .hero-copy h1{transform:none}
 }
 
+
+/* ===== JINX CONSOLE RESTORE v6 ===== */
+body.ee-jinx .hud{
+  display:flex!important;
+  align-items:center;
+  gap:10px;
+}
+body.ee-jinx #consoleButton{
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  position:relative;
+  z-index:50;
+  min-width:108px;
+  justify-content:center;
+  align-items:center;
+  padding:7px 10px!important;
+  border:2px solid var(--jinx-pink)!important;
+  background:#12071b!important;
+  color:#f6f2ff!important;
+  font:700 9px var(--pixel)!important;
+  letter-spacing:.05em;
+  box-shadow:4px 4px 0 var(--jinx-blue)!important;
+  text-shadow:0 0 10px rgba(255,59,189,.34);
+}
+body.ee-jinx #consoleButton:before{
+  content:"~ ";
+  color:var(--jinx-blue);
+}
+body.ee-jinx #consoleButton:hover{
+  background:var(--jinx-pink)!important;
+  color:#12071b!important;
+  border-color:#12071b!important;
+  box-shadow:4px 4px 0 var(--jinx-blue)!important;
+}
+body.ee-jinx #consoleButton:hover:before{color:#12071b}
+@media(max-width:760px){
+  body.ee-jinx #consoleButton{
+    min-width:auto;
+    padding:6px 8px!important;
+    font-size:8px!important;
+  }
+}
+
 </style>
 </head>
 <body>
