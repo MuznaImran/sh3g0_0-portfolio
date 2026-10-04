@@ -1773,6 +1773,132 @@ body.ee-jinx .section-title{
   }
 }
 
+
+/* ===== JINX HERO REDESIGN v10 ===== */
+/* Cleaner Jinx hero: no giant wordmark, no giant text graffiti, no rainbow accent. */
+body.ee-jinx .hero{
+  overflow:hidden;
+}
+body.ee-jinx .jinx-home .jinx-tag,
+body.ee-jinx .jinx-home .jinx-mark,
+body.ee-jinx .jinx-chaos-wordmark{
+  display:none!important;
+}
+
+body.ee-jinx .jinx-home{
+  z-index:7!important;
+}
+
+/* Shark becomes a deliberate sticker on the upper-right edge of the arcade machine. */
+body.ee-jinx .jinx-shark{
+  display:block!important;
+  position:absolute!important;
+  width:clamp(125px,14vw,205px)!important;
+  right:2.5%!important;
+  top:9.5%!important;
+  opacity:.92!important;
+  transform:rotate(8deg)!important;
+  z-index:13!important;
+  filter:
+    drop-shadow(7px 8px 0 rgba(9,3,14,.7))
+    drop-shadow(0 0 14px rgba(47,214,255,.2))!important;
+}
+
+/* Small bomb sticker near the lower-right edge instead of covering content. */
+body.ee-jinx .jinx-hero-bomb{
+  display:block!important;
+  position:absolute!important;
+  width:clamp(90px,9vw,135px)!important;
+  right:3%!important;
+  bottom:4%!important;
+  opacity:.82!important;
+  transform:rotate(-8deg)!important;
+  z-index:13!important;
+  filter:
+    drop-shadow(6px 7px 0 rgba(9,3,14,.66))
+    drop-shadow(0 0 12px rgba(255,59,189,.16))!important;
+}
+
+/* Keep portfolio content visually dominant. */
+body.ee-jinx .hero-copy,
+body.ee-jinx .hero-machine{
+  z-index:10!important;
+}
+
+/* Let stickers slightly sit over the machine frame without crossing the screen content. */
+body.ee-jinx .hero-machine{
+  position:relative;
+}
+body.ee-jinx .machine-screen{
+  z-index:3!important;
+}
+body.ee-jinx .machine-header,
+body.ee-jinx .machine-controls{
+  z-index:4!important;
+}
+
+/* Remove any remaining old hero decoration rules. */
+body.ee-jinx .hero:before,
+body.ee-jinx .hero:after{
+  display:none!important;
+  content:none!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+
+/* Slightly refine the Jinx hero typography so it stays strong without extra clutter. */
+body.ee-jinx .hero-copy h1{
+  transform:skewX(-1deg) rotate(-.2deg)!important;
+  text-shadow:
+    4px 4px 0 var(--jinx-purple),
+    7px 7px 0 rgba(47,214,255,.62)!important;
+}
+body.ee-jinx .hero-copy .tagline{
+  background:#8a35ff!important;
+  box-shadow:4px 4px 0 var(--jinx-pink)!important;
+}
+body.ee-jinx .hero-text{
+  background:none!important;
+  border-left:3px solid var(--jinx-pink)!important;
+}
+
+/* Quiet the micro-stats so the hero has less visual noise. */
+body.ee-jinx .micro-stats{
+  background:rgba(255,255,255,.05)!important;
+  border-color:rgba(255,255,255,.09)!important;
+}
+body.ee-jinx .micro-stats>div{
+  background:rgba(10,6,16,.88)!important;
+  box-shadow:none!important;
+}
+
+@media(max-width:1100px){
+  body.ee-jinx .jinx-shark{
+    width:145px!important;
+    right:1%!important;
+    top:10%!important;
+  }
+  body.ee-jinx .jinx-hero-bomb{
+    width:95px!important;
+    right:2%!important;
+    bottom:2%!important;
+  }
+}
+@media(max-width:760px){
+  body.ee-jinx .jinx-shark{
+    width:92px!important;
+    right:-14px!important;
+    top:12%!important;
+    opacity:.66!important;
+  }
+  body.ee-jinx .jinx-hero-bomb{
+    width:68px!important;
+    right:-10px!important;
+    bottom:2%!important;
+    opacity:.55!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1894,12 +2020,8 @@ body.ee-jinx .section-title{
     <!-- HERO -->
     <section class="hero section" id="home" data-stage="SPAWN">
       <div class="jinx-deco jinx-home" aria-hidden="true">
-        <span class="jinx-tag jt1">PURE CHAOS</span>
-        <span class="jinx-tag jt2">X_X</span>
-        <span class="jinx-mark jm1">✕</span>
-        <span class="jinx-mark jm2">★</span>
-        <img class="jinx-art jinx-chaos-wordmark" src="assets/jinx/neon_chaos_graffiti_wordmark.png" alt="" loading="lazy">
         <img class="jinx-art jinx-shark" src="assets/jinx/neon_graffiti_shark_head.png" alt="" loading="lazy">
+        <img class="jinx-art jinx-hero-bomb" src="assets/jinx/neon_graffiti_punk_bomb_sticker.png" alt="" loading="lazy">
       </div>
       <div class="kuromi-heart-cloud heart-cloud-home" aria-hidden="true">
         <img class="kuromi-heart-img h-red h1" src="assets/kuromi/classic_8_bit_pixel_heart.png" alt="">
